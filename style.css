@@ -1,0 +1,332 @@
+html, body{
+    height: 100%;
+}
+body{
+    background-color: rgba(151, 148, 148, 0.989);
+    margin: 0px;
+	padding: 0px;
+	font-family: 'Roboto';
+	font-size: 1.1rem;
+    font-style: italic;
+}
+h2, h3{
+	margin: 0;
+	padding: 0;
+	color: #d80101;
+    font-size: 2rem;
+}
+p, ol, ul{
+	margin-top: 0;
+}
+p {
+	line-height: 180%;
+}
+
+ol, ul{
+	padding: 0;
+	list-style: none;
+}
+
+/* Header */
+
+header {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #38b1d6;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    float: left;
+    padding: none;
+    margin: none;
+    height: 60px;
+    width: 30%;
+}
+
+/* Menu */
+
+nav{
+	float: right;
+	width: 70%;
+	height: 100%;
+	margin: none;
+}
+	
+nav ul{
+	text-align: center;
+	float: right;
+	margin: none;
+	background: #067ec8ef;
+    border: solid 2px black;
+}
+	
+nav li{
+	display: inline-block;
+	padding: none;
+	margin: none;
+}
+	
+nav li a, nav li span{
+	display: inline-block;
+	padding: 0em 1.5em;
+	text-decoration: none;
+	font-weight: 600;
+	text-transform: uppercase;
+	line-height: 60px;
+}
+	
+nav li a{
+		
+	color: #FFF;
+}
+	
+nav li:hover a, nav li span{
+	background: #FFF;
+	color: #0074D9;
+	border-left: 1px solid #0074D9;
+	text-decoration: none;
+}
+
+
+
+
+/* MAIN */
+
+.container{ 
+	margin: 0px auto;
+	width: 70%;
+}
+
+section{
+    background-color: white;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/* REGIONES INDEX */
+
+#regiones{
+    display: flex;
+    background-color: #9c9d9e;
+}
+
+#regiones div ol{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    border: #000000 solid 5px;
+    gap: 5px;
+}
+
+#regiones div ol li{
+    border: #000000 solid 2px;
+    padding: 15px 0 0 10px;
+    
+    background-color: #FFF;
+}
+
+
+/* PROVINCIAS INDEX */
+
+#provincias-index{
+    display: flex;
+    background-color: #898989;
+}
+
+#provincias-index div ol{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8,1fr);
+    border: #000000 solid 5px;
+    gap: 5px;
+}
+
+#provincias-index div ol li{
+    border: #000000 solid 2px;
+    padding: 15px 0 0 10px;
+    background: #ffffff;
+}
+
+#provincias-index div ol li{
+    border: #000000 solid 2px;
+    padding: 15px 0 0 10px;
+    background: #ffffff;
+}
+
+
+/* #provincias-index{rgba(60, 231, 246, 0.694)
+    display: flex;
+}
+
+#provincias-index div ol{
+    display: inline-block;
+}
+
+#provincias-index div ol li{
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+ */
+/* Imagenes */
+#argen{
+    width: 60%;
+    position: relative;
+    left: 200px;
+}
+
+img{
+    width: 100%;
+    height: 40rem;
+}
+
+/* PROVINCIAS */
+#provincias section p{
+    text-decoration: wavy;
+}
+
+a{
+    text-decoration: none;/* 
+    display: block; */
+}
+/* RECOMENDADOS INDEX*/
+
+.recomendacion article{
+    display: block;
+    background-color: #FFF;
+    padding: 20px;
+}
+
+.recomendacion article img{
+    width: 80%;
+    height: 50%;
+    position: relative;
+    left: 100px;
+}
+
+/* PAGE RECOMENDADOS */
+#recomendados-page{
+    background-color: #FFF;
+}
+
+article h3{
+    text-decoration: underline;
+}
+
+/* Body Recomendados */
+#recomendaciones #one, #two, #three, #four{
+    display: inline-block;
+    margin: 0.5em;
+    background: #4040409b;
+    padding: 30px;
+    position: relative;
+    left: 3.5rem;
+    border: solid rgb(190, 15, 15);
+    border-radius: 15px;
+}
+
+#recomendaciones img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 15px;
+    border: solid 1px black;
+}
+#recomendaciones a{
+    text-align: center;
+    display: block;
+    padding: 10px;
+    color: aliceblue;
+    background-color: cornflowerblue;
+    border-radius: 15px;
+    margin-top: 5px;
+    border: solid 1px black;
+}
+
+#recomendaciones a:hover{
+    background: #c717179b;
+}
+
+/* REGIONES */
+#imagen{
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+}
+#reg-lista ul{
+    justify-content: space-between;
+}
+#reg-lista{
+    display: flex;
+}
+
+/* LINKS */
+
+.link{
+    width: 80px;
+    color: #000000;
+    padding: 0.5rem;
+    background: #0088ff;
+    border-radius: 1cm ;
+}
+
+.link:hover{
+    width: 100px;
+    padding: 0.5rem;
+    background: #58acf6;
+}
+
+/* Mapas */
+
+.mapa iframe{
+    width: 100%;
+    background-size: cover;
+}
+
+/* COMIDAS PAGE */
+
+.comidas{
+    display: inline-block;
+    flex-flow: row wrap;
+    width: 30%;
+    padding: 10px;
+}
+.comidas img{
+    width: 200px;
+    height: 200px;
+}
+
+.comidas section{
+    background-color: white;
+    padding: 20px; 
+    justify-content: center;
+    align-items: center;
+}
+
+.comidas h3{
+    text-align: center;
+}
+/* FOOTER */
+
+footer{
+    width: 100%;
+    color: rgb(40, 234, 234);
+    text-align: center;
+    background-color: rgb(107, 255, 1);
+}
+
+footer a{
+    color: red;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    background-color: #FFF;
+    padding: 15px;
+    border-radius: 100px;
+    border: solid 3px #000000de;
+}
+
+
