@@ -208,6 +208,10 @@ a{
     left: 100px;
 }
 
+@media screen  {
+    
+}
+
 /* PAGE RECOMENDADOS */
 #recomendados-page{
     background-color: #FFF;
@@ -287,28 +291,48 @@ article h3{
 }
 
 /* COMIDAS PAGE */
-
-.comidas{
-    display: inline-block;
+#comida{
+    display: flex;
     flex-flow: row wrap;
-    width: 30%;
+    justify-content: space-evenly;
+}
+.comidas{
+    width: 29%;
     padding: 10px;
+    margin-bottom: 1rem;
+    background: rgb(37, 176, 232);
 }
 .comidas img{
     width: 200px;
     height: 200px;
 }
 
-.comidas section{
+.comidas article{
     background-color: white;
     padding: 20px; 
-    justify-content: center;
-    align-items: center;
 }
 
 .comidas h3{
     text-align: center;
 }
+
+/* COMIDAS PAGE MOBILE */
+
+@media (max-width: 768px) {
+    .comidas p{
+        visibility: hidden;
+        position: absolute;
+    }
+    .comidas img{
+        width: 100%;
+    }
+    .comidas h3{
+        font-size: 100%;
+    }
+}
+
+
+
 /* FOOTER */
 
 footer{
