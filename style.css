@@ -157,6 +157,15 @@ section{
     background: #ffffff;
 }
 
+@media (max-width: 1023px) {
+    #provincias-index div ol{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(12,1fr);
+    }
+    #provincias-index div ol li{
+        font-size: 100%;
+    }
+}
 
 /* #provincias-index{rgba(60, 231, 246, 0.694)
     display: flex;
@@ -184,7 +193,7 @@ img{
     height: 40rem;
 }
 
-/* PROVINCIAS */
+/* PROVINCIAS PAGE */
 #provincias section p{
     text-decoration: wavy;
 }
@@ -193,6 +202,47 @@ a{
     text-decoration: none;/* 
     display: block; */
 }
+
+
+#provincias div ol{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8,1fr);
+    border: #000000 solid 5px;
+    gap: 5px;
+}
+
+#provincias div ol li{
+    border: #000000 solid 2px;
+    padding: 15px 0 0 10px;
+    background: #ffffff;
+}
+
+#provincias div ol li{
+    border: #000000 solid 2px;
+    padding: 15px 0 0 10px;
+    background: #ffffff;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    section h2, h3{
+        text-align: center;
+    }
+    #provincias div ol{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(12,1fr);
+    }
+}
+
+
+@media (max-width: 767px) {
+    #provincias div ol{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(24,1fr);
+    }
+}
+
+
 /* RECOMENDADOS INDEX*/
 
 .recomendacion article{
@@ -220,6 +270,15 @@ a{
 article h3{
     text-decoration: underline;
 }
+
+/* RECOMENDADOS PAGE MOBILE */
+
+@media (max-width: 768px) {
+    article h2, h3{
+        text-align: center;
+    }
+}
+
 
 /* Body Recomendados */
 #recomendaciones #one, #two, #three, #four{
@@ -303,8 +362,8 @@ article h3{
     background: rgb(37, 176, 232);
 }
 .comidas img{
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 50%;
 }
 
 .comidas article{
@@ -318,7 +377,16 @@ article h3{
 
 /* COMIDAS PAGE MOBILE */
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+    .comidas{
+        width: 42%;
+    }
+    .comidas img{
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
     .comidas p{
         visibility: hidden;
         position: absolute;
@@ -328,6 +396,9 @@ article h3{
     }
     .comidas h3{
         font-size: 100%;
+    }
+    .comidas{
+        width: 40%;
     }
 }
 
