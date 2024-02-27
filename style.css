@@ -91,9 +91,6 @@ nav li:hover a, nav li span{
 	text-decoration: none;
 }
 
-
-
-
 /* MAIN */
 
 .container{ 
@@ -157,6 +154,9 @@ section{
     background: #ffffff;
 }
 
+
+/* PROVINCIAS INDEX TABLET */
+
 @media (max-width: 1023px) {
     #provincias-index div ol{
         grid-template-columns: repeat(2, 1fr);
@@ -180,12 +180,25 @@ section{
     flex-wrap: wrap;
     margin-top: 20px;
 }
- */
+*/
+
 /* Imagenes */
 #argen{
     width: 60%;
     position: relative;
     left: 200px;
+}
+@media (min-width: 767px) and (max-width: 1023px){
+    #argen{
+        position: relative;
+        left: 120px;
+    }
+}
+@media (max-width: 767px) {
+    #argen{
+        position: relative;
+        left: 75px;
+    }
 }
 
 img{
@@ -202,7 +215,6 @@ a{
     text-decoration: none;/* 
     display: block; */
 }
-
 
 #provincias div ol{
     display: grid;
@@ -224,6 +236,8 @@ a{
     background: #ffffff;
 }
 
+/* PROVINCIAS PAGE TABLET */
+
 @media (min-width: 768px) and (max-width: 1023px) {
     section h2, h3{
         text-align: center;
@@ -234,11 +248,15 @@ a{
     }
 }
 
+/* PROVINCIAS PAGE MOBILE */
 
 @media (max-width: 767px) {
     #provincias div ol{
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(24,1fr);
+    }
+    section h2, h3{
+        text-align: center;
     }
 }
 
@@ -258,11 +276,8 @@ a{
     left: 100px;
 }
 
-@media screen  {
-    
-}
-
 /* PAGE RECOMENDADOS */
+
 #recomendados-page{
     background-color: #FFF;
 }
