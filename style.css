@@ -167,21 +167,6 @@ section{
     }
 }
 
-/* #provincias-index{rgba(60, 231, 246, 0.694)
-    display: flex;
-}
-
-#provincias-index div ol{
-    display: inline-block;
-}
-
-#provincias-index div ol li{
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-*/
-
 /* Imagenes */
 #argen{
     width: 60%;
@@ -263,39 +248,6 @@ a{
 
 /* RECOMENDADOS INDEX*/
 
-.recomendacion article{
-    display: block;
-    background-color: #FFF;
-    padding: 20px;
-}
-
-.recomendacion article img{
-    width: 80%;
-    height: 50%;
-    position: relative;
-    left: 100px;
-}
-
-/* PAGE RECOMENDADOS */
-
-#recomendados-page{
-    background-color: #FFF;
-}
-
-article h3{
-    text-decoration: underline;
-}
-
-/* RECOMENDADOS PAGE MOBILE */
-
-@media (max-width: 768px) {
-    article h2, h3{
-        text-align: center;
-    }
-}
-
-
-/* Body Recomendados */
 #recomendaciones #one, #two, #three, #four{
     display: inline-block;
     margin: 0.5em;
@@ -328,18 +280,53 @@ article h3{
     background: #c717179b;
 }
 
-/* REGIONES */
-#imagen{
-    width: 50%;
-    height: 50%;
-    display: inline-block;
+/* PAGE RECOMENDADOS */
+
+#recomendados-page{
+    background-color: #FFF;
 }
-#reg-lista ul{
-    justify-content: space-between;
+
+article h3{
+    text-decoration: underline;
 }
-#reg-lista{
+
+/* RECOMENDADOS PAGE MOBILE */
+
+@media (max-width: 768px) {
+    article h2, h3{
+        text-align: center;
+    }
+}
+
+/* REGIONES PAGE */
+#regiones{
     display: flex;
+    flex-flow: nowrap;
 }
+
+#titulo-region{
+    display: inline-flex;
+}
+
+#imagen{
+    width: 25%;
+}
+#reg-lista ul li{
+    margin: 2rem;
+}
+
+/* REGIONES PAGE MOBILE Y TABLET */
+
+@media (max-width: 1023px){
+    #imagen{
+        width: 100%;
+    }
+    
+    #regiones{
+        flex-flow: wrap;
+    }
+}
+
 
 /* LINKS */
 
