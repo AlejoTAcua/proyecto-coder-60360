@@ -5,6 +5,12 @@ body {
   font-family: "Roboto";
   font-size: 1.1rem;
   font-style: italic;
+  /* --------- Imagenes --------- */
+  /* --------- LINKS ---------- */
+  /* -------- Mapas ---------- */
+  /* --------- Header ------- */
+  /* --------- MAIN -------- */
+  /* ----------- FOOTER --------- */
 }
 body h2, body h3 {
   margin: 0;
@@ -28,53 +34,39 @@ body ol, body ul {
   padding: 0;
   list-style: none;
 }
-
-/* --------- Imagenes --------- */
-#argen {
+body #argen {
   width: 60%;
   position: relative;
   left: 200px;
 }
-
 @media (min-width: 767px) and (max-width: 1023px) {
-  #argen {
+  body #argen {
     position: relative;
     left: 120px;
   }
 }
 @media (max-width: 767px) {
-  #argen {
+  body #argen {
     position: relative;
     left: 75px;
   }
 }
-img {
+body img {
   width: 100%;
   height: 40rem;
 }
-
-/* --------- LINKS ---------- */
-.link {
+body .link {
   color: #000000;
   /* padding: 0.5rem;
   background: #0088ff; */
   border-radius: 1cm;
   text-decoration: none;
 }
-
-.link:hover {
-  /* padding: 0.6rem;
-  background: #58acf6; */
-}
-
-/* -------- Mapas ---------- */
-.mapa iframe {
+body .mapa iframe {
   width: 100%;
   background-size: cover;
 }
-
-/* --------- Header ------- */
-header {
+body header {
   overflow: hidden;
   display: flex;
   justify-content: space-between;
@@ -82,8 +74,9 @@ header {
   padding: 20px;
   background-color: #38b1d6;
   border-bottom: solid 1px black;
+  /* ------- Menu  -------- */
 }
-header h1 {
+body header h1 {
   color: rgb(255, 255, 255);
   float: left;
   padding: none;
@@ -91,32 +84,32 @@ header h1 {
   height: 60px;
   width: 30%;
 }
-header img {
+body header img {
   width: 6%;
   height: auto;
   border: #000000 2px solid;
   margin-right: 1rem;
   margin-bottom: 1rem;
 }
-header nav { /* ------- Menu  -------- */
+body header nav {
   float: right;
   width: 70%;
   height: 100%;
   margin: none;
 }
-header nav ul {
+body header nav ul {
   text-align: center;
   float: right;
   margin: none;
   background: rgba(6, 126, 200, 0.937254902);
   border: solid 2px black;
 }
-header nav ul li {
+body header nav ul li {
   display: inline-block;
   padding: none;
   margin: none;
 }
-header nav ul li a, header nav ul li span {
+body header nav ul li a, body header nav ul li span {
   display: inline-block;
   padding: 0em 1.5em;
   text-decoration: none;
@@ -124,21 +117,32 @@ header nav ul li a, header nav ul li span {
   text-transform: uppercase;
   line-height: 60px;
 }
-header nav ul li a {
+body header nav ul li a {
   color: #FFF;
 }
-header nav ul li:hover a, header nav ul li span {
+body header nav ul li:hover a, body header nav ul li span {
   background: #FFF;
   color: #0074D9;
   border-left: 1px solid #0074D9;
   text-decoration: none;
 }
-
-.container { /* --------- MAIN -------- */
+body .container {
   margin: 0px auto;
   width: 70%;
+  /* ---------- REGIONES INDEX ---------- */
+  /* --------- RECOMENDADOS INDEX ---------- */
+  /* ----------- PROVINCIAS INDEX ------- */
+  /* ---------- COMIDAS PAGE -------- */
+  /* ---------- COMIDAS PAGE MOBILE ------------- */
+  /* ---------- REGIONES PAGE ------------ */
+  /* --------- REGIONES PAGE MOBILE Y TABLET ----------- */
+  /* --------- PAGE RECOMENDADOS ----------- */
+  /* ----------- RECOMENDADOS PAGE MOBILE ----------- */
+  /* -------- PROVINCIAS PAGE ----------- */
+  /* -------- PROVINCIAS PAGE TABLET ------------ */
+  /* -------- PROVINCIAS PAGE MOBILE ------- */
 }
-.container section {
+body .container section {
   background-color: white;
   display: flex;
   flex-flow: column wrap;
@@ -146,26 +150,26 @@ header nav ul li:hover a, header nav ul li span {
   border-left: solid 3px black;
   border-right: solid 3px black;
 }
-.container #regiones { /* ---------- REGIONES INDEX ---------- */
+body .container #regiones {
   display: flex;
   background-color: #9c9d9e;
 }
-.container #regiones div {
+body .container #regiones div {
   display: inline-block;
 }
-.container #regiones div ol {
+body .container #regiones div ol {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   border: #000000 solid 5px;
   gap: 5px;
 }
-.container #regiones div ol li {
+body .container #regiones div ol li {
   border: #000000 solid 2px;
   padding: 15px 0 0 10px;
   background-color: #FFF;
 }
-.container #regiones div ol li a {
+body .container #regiones div ol li a {
   text-align: center;
   display: block;
   padding: 10px;
@@ -176,10 +180,10 @@ header nav ul li:hover a, header nav ul li span {
   border: solid 1px black;
   text-decoration: none;
 }
-.container #regiones div ol li a:hover {
+body .container #regiones div ol li a:hover {
   background: rgba(199, 23, 23, 0.6078431373);
 }
-.container #recomendaciones #one, .container #two, .container #three, .container #four { /* --------- RECOMENDADOS INDEX ---------- */
+body .container #recomendaciones #one, body .container #two, body .container #three, body .container #four {
   display: inline-block;
   margin: 0.5em;
   background: rgba(64, 64, 64, 0.6078431373);
@@ -188,13 +192,13 @@ header nav ul li:hover a, header nav ul li span {
   border: solid rgb(190, 15, 15);
   border-radius: 15px;
 }
-.container #recomendaciones #one img, .container #two img, .container #three img, .container #four img {
+body .container #recomendaciones #one img, body .container #two img, body .container #three img, body .container #four img {
   width: 10rem;
   height: 10rem;
   border-radius: 5px;
   border: solid 1px black;
 }
-.container #recomendaciones #one a, .container #two a, .container #three a, .container #four a {
+body .container #recomendaciones #one a, body .container #two a, body .container #three a, body .container #four a {
   text-align: center;
   display: block;
   padding: 10px;
@@ -205,26 +209,26 @@ header nav ul li:hover a, header nav ul li span {
   border: solid 1px black;
   text-decoration: none;
 }
-.container #recomendaciones #one a:hover, .container #two a:hover, .container #three a:hover, .container #four a:hover {
+body .container #recomendaciones #one a:hover, body .container #two a:hover, body .container #three a:hover, body .container #four a:hover {
   background: rgba(199, 23, 23, 0.6078431373);
 }
-.container #provincias-index { /* ----------- PROVINCIAS INDEX ------- */
+body .container #provincias-index {
   display: flex;
   background-color: #898989;
 }
-.container #provincias-index div ol {
+body .container #provincias-index div ol {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(8, 1fr);
   border: #000000 solid 5px;
   gap: 5px;
 }
-.container #provincias-index div ol li {
+body .container #provincias-index div ol li {
   border: #000000 solid 2px;
   padding: 15px 0 0 10px;
   background: #ffffff;
 }
-.container #provincias-index div ol li a {
+body .container #provincias-index div ol li a {
   text-align: center;
   display: block;
   padding: 10px;
@@ -235,32 +239,161 @@ header nav ul li:hover a, header nav ul li span {
   border: solid 1px black;
   text-decoration: none;
 }
-.container #provincias-index div ol li a:hover {
+body .container #provincias-index div ol li a:hover {
   background: rgba(199, 23, 23, 0.6078431373);
 }
-
-/* REGIONES PAGE */
-#regiones {
-  flex-flow: nowrap;
+body .container #comida {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
-#regiones #titulo-region {
-  display: inline;
+body .container #comida .comidas {
+  width: 29%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  background: rgb(37, 176, 232);
 }
-#regiones #imagen {
-  width: 30%;
+body .container #comida .comidas img {
+  width: 100%;
+  height: 50%;
 }
-#regiones #reg-lista ul li {
-  margin: 2rem;
+body .container #comida .comidas article {
+  background-color: white;
+  padding: 20px;
 }
-
-/* REGIONES PAGE MOBILE Y TABLET */
-@media (max-width: 1023px) {
-  #imagen {
+body .container #comida .comidas h3 {
+  text-align: center;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  body .container .comidas {
+    width: 42%;
+  }
+  body .container .comidas img {
     width: 100%;
   }
-  #regiones {
+}
+@media (max-width: 767px) {
+  body .container .comidas {
+    width: 40%;
+  }
+  body .container .comidas p {
+    visibility: hidden;
+    position: absolute;
+  }
+  body .container .comidas img {
+    width: 100%;
+  }
+  body .container .comidas h3 {
+    font-size: 100%;
+  }
+}
+body .container #regiones {
+  flex-flow: nowrap;
+}
+body .container #regiones #titulo-region {
+  display: inline;
+}
+body .container #regiones #imagen {
+  width: 30%;
+}
+body .container #regiones #reg-lista ul li {
+  margin: 2rem;
+}
+body .container .texto p {
+  border-top: solid 2px black;
+}
+@media (max-width: 1023px) {
+  body .container #imagen {
+    width: 100%;
+  }
+  body .container #regiones {
     flex-flow: wrap;
   }
+}
+body .container #recomendados-page {
+  background-color: white;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 0px 1rem;
+  border-left: solid 3px black;
+  border-right: solid 3px black;
+}
+body .container #recomendados-page article h3 {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  body .container article h2, body .container h3 {
+    text-align: center;
+  }
+}
+body .container #provincias img {
+  width: 100%;
+  height: 40rem;
+}
+body .container #provincias section p {
+  text-decoration: wavy;
+  border-top: solid 2px black;
+}
+body .container #provincias div ol {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  border: #000000 solid 5px;
+  gap: 5px;
+}
+body .container #provincias div ol li {
+  border: #000000 solid 2px;
+  padding: 15px 0 0 10px;
+  background: #ffffff;
+}
+body .container #provincias div ol li a {
+  text-align: center;
+  display: block;
+  padding: 10px;
+  color: aliceblue;
+  background-color: cornflowerblue;
+  border-radius: 15px;
+  margin-top: 5px;
+  border: solid 1px black;
+  text-decoration: none;
+}
+body .container #provincias div ol li a:hover {
+  background: rgba(199, 23, 23, 0.6078431373);
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  body .container #provincias div ol {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+  body .container #provincias section h2, body .container #provincias h3 {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  body .container #provincias div ol {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(24, 1fr);
+  }
+  body .container section h2, body .container h3 {
+    text-align: center;
+  }
+}
+body footer p {
+  width: 100%;
+  color: rgb(252, 252, 252);
+  text-align: center;
+  background-color: rgb(3, 161, 156);
+}
+body footer a {
+  color: red;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  background-color: #FFF;
+  padding: 15px;
+  border-radius: 100px;
+  border: solid 3px rgba(0, 0, 0, 0.8705882353);
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
