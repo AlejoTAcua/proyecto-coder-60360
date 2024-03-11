@@ -78,7 +78,7 @@ nav li a, nav li span{
 	text-transform: uppercase;
 	line-height: 60px;
 }
-	
+
 nav li a{
 		
 	color: #FFF;
@@ -140,12 +140,6 @@ section{
     grid-template-rows: repeat(8,1fr);
     border: #000000 solid 5px;
     gap: 5px;
-}
-
-#provincias-index div ol li{
-    border: #000000 solid 2px;
-    padding: 15px 0 0 10px;
-    background: #ffffff;
 }
 
 #provincias-index div ol li{

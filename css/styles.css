@@ -1,0 +1,266 @@
+body {
+  background-color: rgba(216, 216, 216, 0.989);
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto";
+  font-size: 1.1rem;
+  font-style: italic;
+}
+body h2, body h3 {
+  margin: 0;
+  padding: 0;
+  color: #d80101;
+}
+body h2 {
+  font-size: 2.6rem;
+}
+body h3 {
+  font-size: 2rem;
+}
+body p, body ol, body ul {
+  margin-top: 0;
+}
+body p {
+  line-height: 180%;
+  text-align: justify;
+}
+body ol, body ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* --------- Imagenes --------- */
+#argen {
+  width: 60%;
+  position: relative;
+  left: 200px;
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+  #argen {
+    position: relative;
+    left: 120px;
+  }
+}
+@media (max-width: 767px) {
+  #argen {
+    position: relative;
+    left: 75px;
+  }
+}
+img {
+  width: 100%;
+  height: 40rem;
+}
+
+/* --------- LINKS ---------- */
+.link {
+  color: #000000;
+  /* padding: 0.5rem;
+  background: #0088ff; */
+  border-radius: 1cm;
+  text-decoration: none;
+}
+
+.link:hover {
+  /* padding: 0.6rem;
+  background: #58acf6; */
+}
+
+/* -------- Mapas ---------- */
+.mapa iframe {
+  width: 100%;
+  background-size: cover;
+}
+
+/* --------- Header ------- */
+header {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #38b1d6;
+  border-bottom: solid 1px black;
+}
+header h1 {
+  color: rgb(255, 255, 255);
+  float: left;
+  padding: none;
+  margin: none;
+  height: 60px;
+  width: 30%;
+}
+header img {
+  width: 6%;
+  height: auto;
+  border: #000000 2px solid;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+header nav { /* ------- Menu  -------- */
+  float: right;
+  width: 70%;
+  height: 100%;
+  margin: none;
+}
+header nav ul {
+  text-align: center;
+  float: right;
+  margin: none;
+  background: rgba(6, 126, 200, 0.937254902);
+  border: solid 2px black;
+}
+header nav ul li {
+  display: inline-block;
+  padding: none;
+  margin: none;
+}
+header nav ul li a, header nav ul li span {
+  display: inline-block;
+  padding: 0em 1.5em;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 60px;
+}
+header nav ul li a {
+  color: #FFF;
+}
+header nav ul li:hover a, header nav ul li span {
+  background: #FFF;
+  color: #0074D9;
+  border-left: 1px solid #0074D9;
+  text-decoration: none;
+}
+
+.container { /* --------- MAIN -------- */
+  margin: 0px auto;
+  width: 70%;
+}
+.container section {
+  background-color: white;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 0px 1rem;
+  border-left: solid 3px black;
+  border-right: solid 3px black;
+}
+.container #regiones { /* ---------- REGIONES INDEX ---------- */
+  display: flex;
+  background-color: #9c9d9e;
+}
+.container #regiones div {
+  display: inline-block;
+}
+.container #regiones div ol {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  border: #000000 solid 5px;
+  gap: 5px;
+}
+.container #regiones div ol li {
+  border: #000000 solid 2px;
+  padding: 15px 0 0 10px;
+  background-color: #FFF;
+}
+.container #regiones div ol li a {
+  text-align: center;
+  display: block;
+  padding: 10px;
+  color: aliceblue;
+  background-color: cornflowerblue;
+  border-radius: 15px;
+  margin-top: 5px;
+  border: solid 1px black;
+  text-decoration: none;
+}
+.container #regiones div ol li a:hover {
+  background: rgba(199, 23, 23, 0.6078431373);
+}
+.container #recomendaciones #one, .container #two, .container #three, .container #four { /* --------- RECOMENDADOS INDEX ---------- */
+  display: inline-block;
+  margin: 0.5em;
+  background: rgba(64, 64, 64, 0.6078431373);
+  padding: 30px;
+  position: relative;
+  border: solid rgb(190, 15, 15);
+  border-radius: 15px;
+}
+.container #recomendaciones #one img, .container #two img, .container #three img, .container #four img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+.container #recomendaciones #one a, .container #two a, .container #three a, .container #four a {
+  text-align: center;
+  display: block;
+  padding: 10px;
+  color: aliceblue;
+  background-color: cornflowerblue;
+  border-radius: 15px;
+  margin-top: 5px;
+  border: solid 1px black;
+  text-decoration: none;
+}
+.container #recomendaciones #one a:hover, .container #two a:hover, .container #three a:hover, .container #four a:hover {
+  background: rgba(199, 23, 23, 0.6078431373);
+}
+.container #provincias-index { /* ----------- PROVINCIAS INDEX ------- */
+  display: flex;
+  background-color: #898989;
+}
+.container #provincias-index div ol {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  border: #000000 solid 5px;
+  gap: 5px;
+}
+.container #provincias-index div ol li {
+  border: #000000 solid 2px;
+  padding: 15px 0 0 10px;
+  background: #ffffff;
+}
+.container #provincias-index div ol li a {
+  text-align: center;
+  display: block;
+  padding: 10px;
+  color: aliceblue;
+  background-color: cornflowerblue;
+  border-radius: 15px;
+  margin: 0px;
+  border: solid 1px black;
+  text-decoration: none;
+}
+.container #provincias-index div ol li a:hover {
+  background: rgba(199, 23, 23, 0.6078431373);
+}
+
+/* REGIONES PAGE */
+#regiones {
+  flex-flow: nowrap;
+}
+#regiones #titulo-region {
+  display: inline;
+}
+#regiones #imagen {
+  width: 30%;
+}
+#regiones #reg-lista ul li {
+  margin: 2rem;
+}
+
+/* REGIONES PAGE MOBILE Y TABLET */
+@media (max-width: 1023px) {
+  #imagen {
+    width: 100%;
+  }
+  #regiones {
+    flex-flow: wrap;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
