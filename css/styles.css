@@ -91,6 +91,14 @@ body header img {
   margin-right: 1rem;
   margin-bottom: 1rem;
 }
+@media (max-width: 767px) {
+  body header h1 {
+    visibility: hidden;
+  }
+  body header img {
+    width: 25%;
+  }
+}
 body header nav {
   float: right;
   width: 70%;
@@ -126,12 +134,18 @@ body header nav ul li:hover a, body header nav ul li span {
   border-left: 1px solid #0074D9;
   text-decoration: none;
 }
+@media (max-width: 767px) {
+  body header nav nav {
+    visibility: hidden;
+  }
+}
 body .container {
   margin: 0px auto;
   width: 70%;
   /* ---------- REGIONES INDEX ---------- */
   /* --------- RECOMENDADOS INDEX ---------- */
   /* ----------- PROVINCIAS INDEX ------- */
+  /* PROVINCIAS INDEX TABLET */
   /* ---------- COMIDAS PAGE -------- */
   /* ---------- COMIDAS PAGE MOBILE ------------- */
   /* ---------- REGIONES PAGE ------------ */
@@ -149,12 +163,13 @@ body .container section {
   padding: 0px 1rem;
   border-left: solid 3px black;
   border-right: solid 3px black;
+  border-bottom: solid 2px black;
 }
 body .container #regiones {
   display: flex;
   background-color: #9c9d9e;
 }
-body .container #regiones div {
+body .container #regiones .mapareg {
   display: inline-block;
 }
 body .container #regiones div ol {
@@ -163,6 +178,7 @@ body .container #regiones div ol {
   grid-template-rows: repeat(2, 1fr);
   border: #000000 solid 5px;
   gap: 5px;
+  width: auto;
 }
 body .container #regiones div ol li {
   border: #000000 solid 2px;
@@ -182,6 +198,21 @@ body .container #regiones div ol li a {
 }
 body .container #regiones div ol li a:hover {
   background: rgba(199, 23, 23, 0.6078431373);
+}
+@media (max-width: 767px) {
+  body .container #regiones div ol .mapareg {
+    width: auto;
+  }
+  body .container #regiones div ol {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: auto;
+    gap: 0px;
+  }
+  body .container #regiones div ol li a {
+    padding: 1px;
+    margin-top: 0px;
+  }
 }
 body .container #recomendaciones #one, body .container #two, body .container #three, body .container #four {
   display: inline-block;
@@ -211,6 +242,11 @@ body .container #recomendaciones #one a, body .container #two a, body .container
 }
 body .container #recomendaciones #one a:hover, body .container #two a:hover, body .container #three a:hover, body .container #four a:hover {
   background: rgba(199, 23, 23, 0.6078431373);
+}
+@media (max-width: 767px) {
+  body .container #recomendaciones #one, body .container #two, body .container #three, body .container #four {
+    padding: 15px;
+  }
 }
 body .container #provincias-index {
   display: flex;
@@ -242,6 +278,15 @@ body .container #provincias-index div ol li a {
 body .container #provincias-index div ol li a:hover {
   background: rgba(199, 23, 23, 0.6078431373);
 }
+@media (max-width: 1023px) {
+  body .container #provincias-index div ol {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+  body .container #provincias-index div ol li {
+    font-size: 100%;
+  }
+}
 body .container #comida {
   display: flex;
   flex-flow: row wrap;
@@ -251,7 +296,7 @@ body .container #comida .comidas {
   width: 29%;
   padding: 10px;
   margin-bottom: 1rem;
-  background: rgb(37, 176, 232);
+  background: cornflowerblue;
 }
 body .container #comida .comidas img {
   width: 100%;

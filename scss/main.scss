@@ -1,4 +1,6 @@
 body{
+    $color-primary:cornflowerblue;
+
     background-color: rgba(216, 216, 216, 0.989);
     margin: 0px;
 	padding: 0px;
@@ -24,11 +26,11 @@ body{
         margin-top: 0;
     }
 
-    p {
+    p{
         line-height: 180%;
         text-align: justify;
     }
-    
+
     ol, ul{
         padding: 0;
         list-style: none;
@@ -40,13 +42,15 @@ body{
         position: relative;
         left: 200px;
     }
+
     @media (min-width: 767px) and (max-width: 1023px){
         #argen{
             position: relative;
             left: 120px;
         }
     }
-    @media (max-width: 767px) {
+
+    @media (max-width: 767px){
         #argen{
             position: relative;
             left: 75px;
@@ -67,7 +71,6 @@ body{
         text-decoration: none;
     }
 
-
     /* -------- Mapas ---------- */
     .mapa iframe{ 
         width: 100%;
@@ -75,7 +78,7 @@ body{
     }
 
     /* --------- Header ------- */
-    header { 
+    header{
         overflow: hidden;
         display: flex;
         justify-content: space-between;
@@ -101,8 +104,18 @@ body{
             margin-bottom: 1rem;
         }
 
+        @media (max-width: 767px){
+            h1{
+                visibility: hidden;
+            }
+
+            img{
+                width: 25%;
+            }
+        }
+
         /* ------- Menu  -------- */
-        nav {
+        nav{
             float: right;
             width: 70%;
             height: 100%;
@@ -132,13 +145,19 @@ body{
                     a{
                         color: #FFF;
                     }
-                }
 
-                li:hover a, li span{
-                    background: #FFF;
-                    color: #0074D9;
-                    border-left: 1px solid #0074D9;
-                    text-decoration: none;
+                    &:hover a, & span{
+                        background: #FFF;
+                        color: #0074D9;
+                        border-left: 1px solid #0074D9;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            @media (max-width: 767px){
+                nav{
+                    visibility: hidden;
                 }
             }
         }
@@ -156,6 +175,7 @@ body{
             padding: 0px 1rem;
             border-left: solid 3px black;
             border-right: solid 3px black;
+            border-bottom: solid 2px black;
         }
 
         /* ---------- REGIONES INDEX ---------- */
@@ -163,7 +183,7 @@ body{
             display: flex;
             background-color: #9c9d9e;
 
-            div{
+            .mapareg{
                 display: inline-block;
             }
 
@@ -173,6 +193,7 @@ body{
                 grid-template-rows: repeat(2,1fr);
                 border: #000000 solid 5px;
                 gap: 5px;
+                width: auto;
             
                 li{
                     border: #000000 solid 2px;
@@ -184,15 +205,34 @@ body{
                         display: block;
                         padding: 10px;
                         color: aliceblue;
-                        background-color: cornflowerblue;
+                        background-color: $color-primary;
                         border-radius: 15px;
                         margin-top: 5px;
                         border: solid 1px black;
                         text-decoration: none;
-                    }
 
-                    a:hover{
-                        background: #c717179b;
+                        &:hover{
+                            background: #c717179b;
+                        }
+                    }
+                }
+
+                @media (max-width: 767px) {
+                    .mapareg{
+                        width: auto;
+                    }
+        
+
+                    &{
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-template-rows: repeat(3,1fr);
+                        width: auto;
+                        gap: 0px;
+
+                        li a{
+                            padding: 1px;
+                            margin-top: 0px;
+                        }
                     }
                 }
             }
@@ -220,15 +260,21 @@ body{
                 display: block;
                 padding: 10px;
                 color: aliceblue;
-                background-color: cornflowerblue;
+                background-color: $color-primary;
                 border-radius: 15px;
                 margin-top: 5px;
                 border: solid 1px black;
                 text-decoration: none;
+
+                &:hover{
+                    background: #c717179b;
+                }
             }
 
-            a:hover{
-                background: #c717179b;
+            @media (max-width: 767px) {
+                &{
+                    padding: 15px;
+                }
             }
         }
 
@@ -254,16 +300,28 @@ body{
                         display: block;
                         padding: 10px;
                         color: aliceblue;
-                        background-color: cornflowerblue;
+                        background-color: $color-primary;
                         border-radius: 15px;
                         margin: 0px;
                         border: solid 1px black;
                         text-decoration: none;
-                    }
 
-                    a:hover{
-                        background: #c717179b;
+                        &:hover{
+                            background: #c717179b;
+                        }
                     }
+                }
+            }
+        }
+
+        /* PROVINCIAS INDEX TABLET */
+        @media (max-width: 1023px) {
+            #provincias-index div ol{
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(12,1fr);
+            
+                li{
+                    font-size: 100%;
                 }
             }
         }
@@ -279,7 +337,7 @@ body{
                 width: 29%;
                 padding: 10px;
                 margin-bottom: 1rem;
-                background: rgb(37, 176, 232);
+                background: $color-primary;
 
                 img{
                     width: 100%;
@@ -411,7 +469,7 @@ body{
                         display: block;
                         padding: 10px;
                         color: aliceblue;
-                        background-color: cornflowerblue;
+                        background-color: $color-primary;
                         border-radius: 15px;
                         margin-top: 5px;
                         border: solid 1px black;
