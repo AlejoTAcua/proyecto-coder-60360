@@ -12,6 +12,14 @@ body {
   /* --------- MAIN -------- */
   /* ----------- FOOTER --------- */
 }
+@media (max-width: 767px) {
+  body {
+    font-size: 1rem;
+  }
+  body h2, body h3 {
+    font-size: 1.8rem;
+  }
+}
 body h2, body h3 {
   margin: 0;
   padding: 0;
@@ -35,23 +43,20 @@ body ol, body ul {
   list-style: none;
 }
 body #argen {
+  display: block;
   width: 60%;
-  position: relative;
-  left: 200px;
-}
-@media (min-width: 767px) and (max-width: 1023px) {
-  body #argen {
-    position: relative;
-    left: 120px;
-  }
+  height: 40rem;
+  margin: auto;
 }
 @media (max-width: 767px) {
   body #argen {
-    position: relative;
-    left: 75px;
+    width: 100%;
+    height: 40rem;
   }
 }
 body img {
+  display: block;
+  margin: auto;
   width: 100%;
   height: 40rem;
 }
@@ -156,6 +161,11 @@ body .container {
   /* -------- PROVINCIAS PAGE TABLET ------------ */
   /* -------- PROVINCIAS PAGE MOBILE ------- */
 }
+@media (max-width: 767px) {
+  body .container {
+    width: 90%;
+  }
+}
 body .container section {
   background-color: white;
   display: flex;
@@ -168,9 +178,6 @@ body .container section {
 body .container #regiones {
   display: flex;
   background-color: #9c9d9e;
-}
-body .container #regiones .mapareg {
-  display: inline-block;
 }
 body .container #regiones div ol {
   display: grid;
@@ -246,6 +253,7 @@ body .container #recomendaciones #one a:hover, body .container #two a:hover, bod
 @media (max-width: 767px) {
   body .container #recomendaciones #one, body .container #two, body .container #three, body .container #four {
     padding: 15px;
+    justify-content: space-evenly;
   }
 }
 body .container #provincias-index {
@@ -343,9 +351,16 @@ body .container #regiones #imagen {
 }
 body .container #regiones #reg-lista ul li {
   margin: 2rem;
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  width: auto;
+  text-align: center;
 }
 body .container .texto p {
   border-top: solid 2px black;
+}
+body .container section {
+  border-bottom: none;
 }
 @media (max-width: 1023px) {
   body .container #imagen {
@@ -371,9 +386,9 @@ body .container #recomendados-page article h3 {
     text-align: center;
   }
 }
-body .container #provincias img {
-  width: 100%;
-  height: 40rem;
+body .container #provincias div img {
+  width: 60%;
+  height: 45rem;
 }
 body .container #provincias section p {
   text-decoration: wavy;

@@ -80,10 +80,9 @@ nav li a, nav li span{
 }
 
 nav li a{
-		
 	color: #FFF;
 }
-	
+
 nav li:hover a, nav li span{
 	background: #FFF;
 	color: #0074D9;
@@ -419,5 +418,3 @@ footer a{
     border-radius: 100px;
     border: solid 3px #000000de;
 }
-
-
