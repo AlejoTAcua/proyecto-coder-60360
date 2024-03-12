@@ -342,8 +342,7 @@ body .container #comida .comidas h3 {
     width: 40%;
   }
   body .container .comidas p {
-    visibility: hidden;
-    position: absolute;
+    display: none;
   }
   body .container .comidas img {
     width: 100%;
