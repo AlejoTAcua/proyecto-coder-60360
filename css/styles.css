@@ -12,6 +12,9 @@ body {
   /* --------- MAIN -------- */
   /* ----------- FOOTER --------- */
 }
+body :root {
+  --clippy: polygon(0 0, 0 0,0 100%, 0% 100%);
+}
 @media (max-width: 767px) {
   body {
     font-size: 1rem;
@@ -70,6 +73,7 @@ body .link {
 body .mapa iframe {
   width: 100%;
   background-size: cover;
+  margin-bottom: 5px;
 }
 body header {
   overflow: hidden;
@@ -138,10 +142,11 @@ body header nav ul li:hover a, body header nav ul li span {
   color: #0074D9;
   border-left: 1px solid #0074D9;
   text-decoration: none;
+  transition: 0.5s;
 }
 @media (max-width: 767px) {
-  body header nav nav {
-    visibility: hidden;
+  body header nav nav ul li a {
+    visibility: collapse;
   }
 }
 body .container {
@@ -177,7 +182,7 @@ body .container section {
 }
 body .container #regiones {
   display: flex;
-  background-color: #9c9d9e;
+  background-color: #898989;
 }
 body .container #regiones div ol {
   display: grid;
@@ -204,7 +209,8 @@ body .container #regiones div ol li a {
   text-decoration: none;
 }
 body .container #regiones div ol li a:hover {
-  background: rgba(199, 23, 23, 0.6078431373);
+  background: rgba(201, 24, 24, 0.8823529412);
+  transition: 0.5s;
 }
 @media (max-width: 767px) {
   body .container #regiones div ol .mapareg {
@@ -224,7 +230,7 @@ body .container #regiones div ol li a:hover {
 body .container #recomendaciones #one, body .container #two, body .container #three, body .container #four {
   display: inline-block;
   margin: 0.5em;
-  background: rgba(64, 64, 64, 0.6078431373);
+  background: #898989;
   padding: 30px;
   position: relative;
   border: solid rgb(190, 15, 15);
@@ -233,7 +239,8 @@ body .container #recomendaciones #one, body .container #two, body .container #th
 body .container #recomendaciones #one img, body .container #two img, body .container #three img, body .container #four img {
   width: 10rem;
   height: 10rem;
-  border-radius: 5px;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
   border: solid 1px black;
 }
 body .container #recomendaciones #one a, body .container #two a, body .container #three a, body .container #four a {
@@ -248,7 +255,8 @@ body .container #recomendaciones #one a, body .container #two a, body .container
   text-decoration: none;
 }
 body .container #recomendaciones #one a:hover, body .container #two a:hover, body .container #three a:hover, body .container #four a:hover {
-  background: rgba(199, 23, 23, 0.6078431373);
+  background: rgba(201, 24, 24, 0.8823529412);
+  transition: 0.5s;
 }
 @media (max-width: 767px) {
   body .container #recomendaciones #one, body .container #two, body .container #three, body .container #four {
@@ -259,6 +267,9 @@ body .container #recomendaciones #one a:hover, body .container #two a:hover, bod
 body .container #provincias-index {
   display: flex;
   background-color: #898989;
+}
+body .container #provincias-index p {
+  color: white;
 }
 body .container #provincias-index div ol {
   display: grid;
@@ -284,7 +295,8 @@ body .container #provincias-index div ol li a {
   text-decoration: none;
 }
 body .container #provincias-index div ol li a:hover {
-  background: rgba(199, 23, 23, 0.6078431373);
+  background: rgba(201, 24, 24, 0.8823529412);
+  transition: 0.5s;
 }
 @media (max-width: 1023px) {
   body .container #provincias-index div ol {
@@ -418,7 +430,8 @@ body .container #provincias div ol li a {
   text-decoration: none;
 }
 body .container #provincias div ol li a:hover {
-  background: rgba(199, 23, 23, 0.6078431373);
+  background: rgba(201, 24, 24, 0.8823529412);
+  transition: 0.5s;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   body .container #provincias div ol {
@@ -444,7 +457,19 @@ body footer p {
   text-align: center;
   background-color: rgb(3, 161, 156);
 }
-body footer a {
+body footer #arriba {
+  display: inline-block;
+  width: 100%;
+  color: rgb(252, 252, 252);
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(3, 161, 156);
+}
+body footer #arriba:hover {
+  text-decoration: underline;
+}
+body footer #home {
+  display: inline;
   color: red;
   position: fixed;
   bottom: 5px;
@@ -454,6 +479,11 @@ body footer a {
   border-radius: 100px;
   border: solid 3px rgba(0, 0, 0, 0.8705882353);
   text-decoration: none;
+}
+body footer #home:hover {
+  transition: 1s;
+  background-color: #000000;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

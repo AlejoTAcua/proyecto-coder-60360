@@ -1,6 +1,10 @@
 body{
     $color-primary:cornflowerblue;
 
+    :root{
+        --clippy: polygon(0 0, 0 0,0 100%, 0% 100%);
+    }
+
     background-color: rgba(216, 216, 216, 0.989);
     margin: 0px;
 	padding: 0px;
@@ -81,6 +85,7 @@ body{
     .mapa iframe{ 
         width: 100%;
         background-size: cover;
+        margin-bottom: 5px;
     }
 
     /* --------- Header ------- */
@@ -157,13 +162,14 @@ body{
                         color: #0074D9;
                         border-left: 1px solid #0074D9;
                         text-decoration: none;
+                        transition: 0.5s;
                     }
                 }
             }
 
             @media (max-width: 767px){
-                nav{
-                    visibility: hidden;
+                nav ul li a{
+                    visibility: collapse;
                 }
             }
         }
@@ -193,7 +199,7 @@ body{
         /* ---------- REGIONES INDEX ---------- */
         #regiones{
             display: flex;
-            background-color: #9c9d9e;
+            background-color: #898989;
 
             div ol{
                 display: grid;
@@ -220,7 +226,8 @@ body{
                         text-decoration: none;
 
                         &:hover{
-                            background: #c717179b;
+                            background: #c91818e1;
+                            transition: 0.5s;
                         }
                     }
                 }
@@ -250,7 +257,7 @@ body{
         #recomendaciones #one, #two, #three, #four{ 
             display: inline-block;
             margin: 0.5em;
-            background: #4040409b;
+            background:  #898989;
             padding: 30px;
             position: relative;
             border: solid rgb(190, 15, 15);
@@ -259,7 +266,8 @@ body{
             img{
                 width: 10rem;
                 height: 10rem;
-                border-radius: 5px;
+                border-top-left-radius: 25px;
+                border-bottom-right-radius: 25px;
                 border: solid 1px black;
             }
 
@@ -275,7 +283,8 @@ body{
                 text-decoration: none;
 
                 &:hover{
-                    background: #c717179b;
+                    background: #c91818e1;
+                    transition: 0.5s;
                 }
             }
 
@@ -291,6 +300,10 @@ body{
         #provincias-index{ 
             display: flex;
             background-color: #898989;
+            
+            p{
+                color: white;
+            }
 
             div ol{
                 display: grid;
@@ -316,7 +329,8 @@ body{
                         text-decoration: none;
 
                         &:hover{
-                            background: #c717179b;
+                            background: #c91818e1;
+                            transition: 0.5s;
                         }
                     }
                 }
@@ -495,7 +509,8 @@ body{
                     }
             
                     a:hover{
-                        background: #c717179b;
+                        background: #c91818e1;
+                        transition: 0.5s;
                     }
                 }
             }
@@ -537,7 +552,21 @@ body{
         background-color: rgb(3, 161, 156);
         }
 
-        a{
+        #arriba{
+        display: inline-block;
+        width: 100%;
+        color: rgb(252, 252, 252);
+        text-align: center;
+        text-decoration: none;
+        background-color: rgb(3, 161, 156);
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        #home{
+            display: inline;
             color: red;
             position: fixed;
             bottom: 5px;
@@ -547,6 +576,12 @@ body{
             border-radius: 100px;
             border: solid 3px #000000de;
             text-decoration: none;
+
+            &:hover{
+                transition: 1s;
+                background-color: #000000;
+                color: white;
+            }
         }
     }
 }
