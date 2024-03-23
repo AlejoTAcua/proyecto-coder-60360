@@ -1,16 +1,17 @@
 body{
-    $color-primary:cornflowerblue;
-
+    $color-primary: #00B4CC;
+    /* cornflowerblue 
+    #343838,#005F6B,#008C9E,#00B4CC,#00DFFC*/
     :root{
         --clippy: polygon(0 0, 0 0,0 100%, 0% 100%);
     }
 
-    background-color: rgba(216, 216, 216, 0.989);
+    background-color:#343838;
     margin: 0px;
 	padding: 0px;
 	font-family: 'Roboto';
 	font-size: 1.1rem;
-    font-style: italic;
+    font-style: normal;
 
     @media (max-width: 767px){
         &{
@@ -25,7 +26,8 @@ body{
     h2,h3{
         margin: 0;
         padding: 0;
-        color: #d80101;
+        color: #00B4CC;
+        font-weight: 900;
     }
 
     h2{
@@ -43,6 +45,7 @@ body{
     p{
         line-height: 180%;
         text-align: justify;
+        font-weight: 300;
     }
 
     ol, ul{
@@ -51,32 +54,43 @@ body{
     }
 
     /* --------- Imagenes --------- */
-    #argen{
-        display: block;
-        width: 60%;
-        height: 40rem;
-        margin: auto;
-    }
-
-    @media (max-width: 767px){
-        #argen{
-            width: 100%;
-            height: 40rem;
-        }
-    }
-
     img{
         display: block;
         margin: auto;
-        width: 100%;
+        width: 60%;
         height: 40rem;
+        object-fit: cover;
+    }
+
+    #argen{
+        display: block;
+        margin: auto;
+
+        & img{
+                width: 100%;
+                height: 40rem;
+                object-fit: cover;
+            }
+    }
+
+    @media (max-width: 767px){
+        img{
+            margin: 0;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    
+        #argen img{
+            margin: auto;
+            width: 100%;
+            height: auto;
+        }
     }
 
     /* --------- LINKS ---------- */
     .link{
         color: #000000;
-        /* padding: 0.5rem;
-        background: #0088ff; */
         border-radius: 1cm ;
         text-decoration: none;
     }
@@ -198,8 +212,10 @@ body{
 
         /* ---------- REGIONES INDEX ---------- */
         #regiones{
-            display: flex;
-            background-color: #898989;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 10px 2fr 1fr;
+            background-color:#005F6B;
 
             div ol{
                 display: grid;

@@ -1,10 +1,12 @@
 body {
-  background-color: rgba(216, 216, 216, 0.989);
+  /* cornflowerblue 
+  #343838,#005F6B,#008C9E,#00B4CC,#00DFFC*/
+  background-color: #343838;
   margin: 0px;
   padding: 0px;
   font-family: "Roboto";
   font-size: 1.1rem;
-  font-style: italic;
+  font-style: normal;
   /* --------- Imagenes --------- */
   /* --------- LINKS ---------- */
   /* -------- Mapas ---------- */
@@ -26,7 +28,8 @@ body :root {
 body h2, body h3 {
   margin: 0;
   padding: 0;
-  color: #d80101;
+  color: #00B4CC;
+  font-weight: 900;
 }
 body h2 {
   font-size: 2.6rem;
@@ -40,33 +43,43 @@ body p, body ol, body ul {
 body p {
   line-height: 180%;
   text-align: justify;
+  font-weight: 300;
 }
 body ol, body ul {
   padding: 0;
   list-style: none;
 }
-body #argen {
-  display: block;
-  width: 60%;
-  height: 40rem;
-  margin: auto;
-}
-@media (max-width: 767px) {
-  body #argen {
-    width: 100%;
-    height: 40rem;
-  }
-}
 body img {
   display: block;
   margin: auto;
+  width: 60%;
+  height: 40rem;
+  object-fit: cover;
+}
+body #argen {
+  display: block;
+  margin: auto;
+}
+body #argen img {
   width: 100%;
   height: 40rem;
+  object-fit: cover;
+}
+@media (max-width: 767px) {
+  body img {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  body #argen img {
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
 }
 body .link {
   color: #000000;
-  /* padding: 0.5rem;
-  background: #0088ff; */
   border-radius: 1cm;
   text-decoration: none;
 }
@@ -181,8 +194,10 @@ body .container section {
   border-bottom: solid 2px black;
 }
 body .container #regiones {
-  display: flex;
-  background-color: #898989;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10px 2fr 1fr;
+  background-color: #005F6B;
 }
 body .container #regiones div ol {
   display: grid;
@@ -202,7 +217,7 @@ body .container #regiones div ol li a {
   display: block;
   padding: 10px;
   color: aliceblue;
-  background-color: cornflowerblue;
+  background-color: #00B4CC;
   border-radius: 15px;
   margin-top: 5px;
   border: solid 1px black;
@@ -248,7 +263,7 @@ body .container #recomendaciones #one a, body .container #two a, body .container
   display: block;
   padding: 10px;
   color: aliceblue;
-  background-color: cornflowerblue;
+  background-color: #00B4CC;
   border-radius: 15px;
   margin-top: 5px;
   border: solid 1px black;
@@ -288,7 +303,7 @@ body .container #provincias-index div ol li a {
   display: block;
   padding: 10px;
   color: aliceblue;
-  background-color: cornflowerblue;
+  background-color: #00B4CC;
   border-radius: 15px;
   margin: 0px;
   border: solid 1px black;
@@ -316,7 +331,7 @@ body .container #comida .comidas {
   width: 29%;
   padding: 10px;
   margin-bottom: 1rem;
-  background: cornflowerblue;
+  background: #00B4CC;
 }
 body .container #comida .comidas img {
   width: 100%;
@@ -362,7 +377,7 @@ body .container #regiones #imagen {
 }
 body .container #regiones #reg-lista ul li {
   margin: 2rem;
-  background-color: cornflowerblue;
+  background-color: #00B4CC;
   border-radius: 10px;
   width: auto;
   text-align: center;
@@ -422,7 +437,7 @@ body .container #provincias div ol li a {
   display: block;
   padding: 10px;
   color: aliceblue;
-  background-color: cornflowerblue;
+  background-color: #00B4CC;
   border-radius: 15px;
   margin-top: 5px;
   border: solid 1px black;
