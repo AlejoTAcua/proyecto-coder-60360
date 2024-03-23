@@ -1,6 +1,8 @@
-body {
-  /* cornflowerblue 
-  #343838,#005F6B,#008C9E,#00B4CC,#00DFFC*/
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  /* #343838,#005F6B,#008C9E,#00B4CC,#00DFFC */
   background-color: #343838;
   margin: 0px;
   padding: 0px;
@@ -14,81 +16,84 @@ body {
   /* --------- MAIN -------- */
   /* ----------- FOOTER --------- */
 }
-body :root {
+html body :root {
   --clippy: polygon(0 0, 0 0,0 100%, 0% 100%);
 }
 @media (max-width: 767px) {
-  body {
+  html body {
     font-size: 1rem;
   }
-  body h2, body h3 {
+  html body h2, html body h3 {
     font-size: 1.8rem;
   }
 }
-body h2, body h3 {
+html body h2, html body h3 {
   margin: 0;
   padding: 0;
   color: #00B4CC;
   font-weight: 900;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
 }
-body h2 {
+html body h2 {
   font-size: 2.6rem;
 }
-body h3 {
+html body h3 {
   font-size: 2rem;
 }
-body p, body ol, body ul {
+html body p, html body ol, html body ul {
   margin-top: 0;
 }
-body p {
+html body p {
   line-height: 180%;
   text-align: justify;
   font-weight: 300;
 }
-body ol, body ul {
+html body ol, html body ul {
   padding: 0;
   list-style: none;
 }
-body img {
+html body img {
   display: block;
   margin: auto;
   width: 60%;
   height: 40rem;
   object-fit: cover;
 }
-body #argen {
+html body #argen {
   display: block;
   margin: auto;
 }
-body #argen img {
+html body #argen img {
   width: 100%;
   height: 40rem;
   object-fit: cover;
 }
 @media (max-width: 767px) {
-  body img {
+  html body img {
     margin: 0;
     width: 100%;
     height: auto;
     object-fit: cover;
   }
-  body #argen img {
+  html body #argen img {
     margin: auto;
     width: 100%;
     height: auto;
   }
 }
-body .link {
+html body .link {
   color: #000000;
   border-radius: 1cm;
   text-decoration: none;
+  font-weight: 700;
 }
-body .mapa iframe {
+html body .mapa iframe {
   width: 100%;
   background-size: cover;
   margin-bottom: 5px;
 }
-body header {
+html body header {
   overflow: hidden;
   display: flex;
   justify-content: space-between;
@@ -98,48 +103,49 @@ body header {
   border-bottom: solid 1px black;
   /* ------- Menu  -------- */
 }
-body header h1 {
+html body header h1 {
   color: rgb(255, 255, 255);
   float: left;
   padding: none;
   margin: none;
   height: 60px;
   width: 30%;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
-body header img {
+html body header img {
   width: 6%;
   height: auto;
   border: #000000 2px solid;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
+  margin: auto;
 }
 @media (max-width: 767px) {
-  body header h1 {
+  html body header h1 {
     visibility: hidden;
   }
-  body header img {
+  html body header img {
     width: 25%;
   }
 }
-body header nav {
+html body header nav {
   float: right;
   width: 70%;
   height: 100%;
   margin: none;
 }
-body header nav ul {
+html body header nav ul {
   text-align: center;
   float: right;
   margin: none;
   background: rgba(6, 126, 200, 0.937254902);
   border: solid 2px black;
 }
-body header nav ul li {
+html body header nav ul li {
   display: inline-block;
   padding: none;
   margin: none;
 }
-body header nav ul li a, body header nav ul li span {
+html body header nav ul li a, html body header nav ul li span {
   display: inline-block;
   padding: 0em 1.5em;
   text-decoration: none;
@@ -147,10 +153,10 @@ body header nav ul li a, body header nav ul li span {
   text-transform: uppercase;
   line-height: 60px;
 }
-body header nav ul li a {
+html body header nav ul li a {
   color: #FFF;
 }
-body header nav ul li:hover a, body header nav ul li span {
+html body header nav ul li:hover a, html body header nav ul li span {
   background: #FFF;
   color: #0074D9;
   border-left: 1px solid #0074D9;
@@ -158,11 +164,11 @@ body header nav ul li:hover a, body header nav ul li span {
   transition: 0.5s;
 }
 @media (max-width: 767px) {
-  body header nav nav ul li a {
+  html body header nav nav ul li a {
     visibility: collapse;
   }
 }
-body .container {
+html body .container {
   margin: 0px auto;
   width: 70%;
   /* ---------- REGIONES INDEX ---------- */
@@ -170,9 +176,8 @@ body .container {
   /* ----------- PROVINCIAS INDEX ------- */
   /* PROVINCIAS INDEX TABLET */
   /* ---------- COMIDAS PAGE -------- */
-  /* ---------- COMIDAS PAGE MOBILE ------------- */
   /* ---------- REGIONES PAGE ------------ */
-  /* --------- REGIONES PAGE MOBILE Y TABLET ----------- */
+  /* ----------- REGIONES PAGE MOBILE ----------- */
   /* --------- PAGE RECOMENDADOS ----------- */
   /* ----------- RECOMENDADOS PAGE MOBILE ----------- */
   /* -------- PROVINCIAS PAGE ----------- */
@@ -180,11 +185,11 @@ body .container {
   /* -------- PROVINCIAS PAGE MOBILE ------- */
 }
 @media (max-width: 767px) {
-  body .container {
+  html body .container {
     width: 90%;
   }
 }
-body .container section {
+html body .container section {
   background-color: white;
   display: flex;
   flex-flow: column wrap;
@@ -193,26 +198,35 @@ body .container section {
   border-right: solid 3px black;
   border-bottom: solid 2px black;
 }
-body .container #regiones {
+html body .container #regiones-index {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 10px 2fr 1fr;
+  grid-template-rows: 50px 2fr 0.7fr;
   background-color: #005F6B;
+  width: auto;
 }
-body .container #regiones div ol {
+html body .container #regiones-index .mapareg {
+  display: block;
+  margin: auto;
+}
+html body .container #regiones-index .mapareg img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+}
+html body .container #regiones-index .grilla ol {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   border: #000000 solid 5px;
   gap: 5px;
-  width: auto;
 }
-body .container #regiones div ol li {
+html body .container #regiones-index .grilla ol li {
   border: #000000 solid 2px;
-  padding: 15px 0 0 10px;
+  padding: 5px;
   background-color: #FFF;
 }
-body .container #regiones div ol li a {
+html body .container #regiones-index .grilla ol li a {
   text-align: center;
   display: block;
   padding: 10px;
@@ -223,42 +237,48 @@ body .container #regiones div ol li a {
   border: solid 1px black;
   text-decoration: none;
 }
-body .container #regiones div ol li a:hover {
+html body .container #regiones-index .grilla ol li a:hover {
   background: rgba(201, 24, 24, 0.8823529412);
   transition: 0.5s;
 }
 @media (max-width: 767px) {
-  body .container #regiones div ol .mapareg {
-    width: auto;
+  html body .container #regiones-index {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 2fr 0.1fr;
   }
-  body .container #regiones div ol {
+  html body .container #regiones-index .mapareg img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  html body .container #regiones-index .grilla ol {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    width: auto;
-    gap: 0px;
   }
-  body .container #regiones div ol li a {
+  html body .container #regiones-index .grilla ol li a {
     padding: 1px;
     margin-top: 0px;
   }
 }
-body .container #recomendaciones #one, body .container #two, body .container #three, body .container #four {
+html body .container #recomendaciones #one, html body .container #two, html body .container #three, html body .container #four {
   display: inline-block;
   margin: 0.5em;
+  margin-bottom: 2rem;
   background: #898989;
   padding: 30px;
   position: relative;
-  border: solid rgb(190, 15, 15);
+  border: solid #00DFFC;
   border-radius: 15px;
+  box-shadow: 10px 5px 7px 0px black;
 }
-body .container #recomendaciones #one img, body .container #two img, body .container #three img, body .container #four img {
+html body .container #recomendaciones #one img, html body .container #two img, html body .container #three img, html body .container #four img {
   width: 10rem;
   height: 10rem;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
   border: solid 1px black;
 }
-body .container #recomendaciones #one a, body .container #two a, body .container #three a, body .container #four a {
+html body .container #recomendaciones #one a, html body .container #two a, html body .container #three a, html body .container #four a {
   text-align: center;
   display: block;
   padding: 10px;
@@ -268,37 +288,38 @@ body .container #recomendaciones #one a, body .container #two a, body .container
   margin-top: 5px;
   border: solid 1px black;
   text-decoration: none;
+  font-weight: 700;
 }
-body .container #recomendaciones #one a:hover, body .container #two a:hover, body .container #three a:hover, body .container #four a:hover {
+html body .container #recomendaciones #one a:hover, html body .container #two a:hover, html body .container #three a:hover, html body .container #four a:hover {
   background: rgba(201, 24, 24, 0.8823529412);
   transition: 0.5s;
 }
 @media (max-width: 767px) {
-  body .container #recomendaciones #one, body .container #two, body .container #three, body .container #four {
+  html body .container #recomendaciones #one, html body .container #two, html body .container #three, html body .container #four {
     padding: 15px;
     justify-content: space-evenly;
   }
 }
-body .container #provincias-index {
+html body .container #provincias-index {
   display: flex;
   background-color: #898989;
 }
-body .container #provincias-index p {
+html body .container #provincias-index p {
   color: white;
 }
-body .container #provincias-index div ol {
+html body .container #provincias-index div ol {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(8, 1fr);
   border: #000000 solid 5px;
   gap: 5px;
 }
-body .container #provincias-index div ol li {
+html body .container #provincias-index div ol li {
   border: #000000 solid 2px;
-  padding: 15px 0 0 10px;
+  padding: 5px;
   background: #ffffff;
 }
-body .container #provincias-index div ol li a {
+html body .container #provincias-index div ol li a {
   text-align: center;
   display: block;
   padding: 10px;
@@ -309,94 +330,121 @@ body .container #provincias-index div ol li a {
   border: solid 1px black;
   text-decoration: none;
 }
-body .container #provincias-index div ol li a:hover {
+html body .container #provincias-index div ol li a:hover {
   background: rgba(201, 24, 24, 0.8823529412);
   transition: 0.5s;
 }
 @media (max-width: 1023px) {
-  body .container #provincias-index div ol {
+  html body .container #provincias-index div ol {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(12, 1fr);
   }
-  body .container #provincias-index div ol li {
+  html body .container #provincias-index div ol li {
     font-size: 100%;
   }
 }
-body .container #comida {
+html body .container #comida {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
+  /* ---------- COMIDAS PAGE MOBILE ------------- */
 }
-body .container #comida .comidas {
+html body .container #comida .primera-fila {
+  display: block;
+  margin: auto;
+}
+html body .container #comida .primera-fila img {
+  border: #000000 solid 2px;
+  height: 50%;
+  margin-bottom: 25px;
+}
+html body .container #comida .primera-fila p {
+  align-items: center;
+}
+html body .container #comida .comidas {
   width: 29%;
   padding: 10px;
   margin-bottom: 1rem;
   background: #00B4CC;
 }
-body .container #comida .comidas img {
-  width: 100%;
-  height: 50%;
-}
-body .container #comida .comidas article {
+html body .container #comida .comidas article {
   background-color: white;
   padding: 20px;
 }
-body .container #comida .comidas h3 {
+html body .container #comida .comidas article img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: none;
+  margin: none;
+}
+html body .container #comida .comidas article h3 {
   text-align: center;
+  object-fit: cover;
+}
+html body .container #comida .comidas article p {
+  border-top: #000000 solid 1px;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  body .container .comidas {
+  html body .container #comida .comidas {
     width: 42%;
   }
-  body .container .comidas img {
+  html body .container #comida .comidas img {
     width: 100%;
+    height: 20%;
   }
 }
 @media (max-width: 767px) {
-  body .container .comidas {
+  html body .container #comida .comidas {
     width: 40%;
   }
-  body .container .comidas p {
+  html body .container #comida .comidas p {
     display: none;
   }
-  body .container .comidas img {
-    width: 100%;
+  html body .container #comida .comidas img {
+    width: 70%;
   }
-  body .container .comidas h3 {
+  html body .container #comida .comidas h3 {
     font-size: 100%;
   }
 }
-body .container #regiones {
-  flex-flow: nowrap;
+html body .container #regiones {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15px 2fr 1fr;
+  background-color: #005F6B;
 }
-body .container #regiones #titulo-region {
+html body .container #regiones #titulo-region {
   display: inline;
 }
-body .container #regiones #imagen {
-  width: 30%;
+html body .container #regiones #imagen {
+  display: block;
+  margin: auto;
 }
-body .container #regiones #reg-lista ul li {
+html body .container #regiones #imagen img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+}
+html body .container #regiones #reg-lista ul li {
   margin: 2rem;
   background-color: #00B4CC;
   border-radius: 10px;
   width: auto;
   text-align: center;
 }
-body .container .texto p {
+html body .container .texto p {
   border-top: solid 2px black;
 }
-body .container section {
+html body .container section {
   border-bottom: none;
 }
-@media (max-width: 1023px) {
-  body .container #imagen {
-    width: 100%;
-  }
-  body .container #regiones {
-    flex-flow: wrap;
+@media (max-width: 768px) {
+  html body .container #regiones {
+    grid-template-rows: 20px 2fr 1fr;
   }
 }
-body .container #recomendados-page {
+html body .container #recomendados-page {
   background-color: white;
   display: flex;
   flex-flow: column wrap;
@@ -404,35 +452,40 @@ body .container #recomendados-page {
   border-left: solid 3px black;
   border-right: solid 3px black;
 }
-body .container #recomendados-page article h3 {
+html body .container #recomendados-page article h3 {
   text-decoration: underline;
 }
 @media (max-width: 768px) {
-  body .container article h2, body .container h3 {
+  html body .container article h2, html body .container h3 {
     text-align: center;
   }
 }
-body .container #provincias div img {
-  width: 60%;
-  height: 45rem;
+html body .container #provincias #imagen {
+  display: block;
+  margin: auto;
 }
-body .container #provincias section p {
+html body .container #provincias #imagen img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+}
+html body .container #provincias section p {
   text-decoration: wavy;
   border-top: solid 2px black;
 }
-body .container #provincias div ol {
+html body .container #provincias div ol {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(8, 1fr);
   border: #000000 solid 5px;
   gap: 5px;
 }
-body .container #provincias div ol li {
+html body .container #provincias div ol li {
   border: #000000 solid 2px;
-  padding: 15px 0 0 10px;
+  padding: 5px;
   background: #ffffff;
 }
-body .container #provincias div ol li a {
+html body .container #provincias div ol li a {
   text-align: center;
   display: block;
   padding: 10px;
@@ -443,35 +496,41 @@ body .container #provincias div ol li a {
   border: solid 1px black;
   text-decoration: none;
 }
-body .container #provincias div ol li a:hover {
+html body .container #provincias div ol li a:hover {
   background: rgba(201, 24, 24, 0.8823529412);
   transition: 0.5s;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  body .container #provincias div ol {
+  html body .container #provincias #imagen img {
+    height: auto;
+  }
+  html body .container #provincias div ol {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(12, 1fr);
   }
-  body .container #provincias section h2, body .container #provincias h3 {
+  html body .container #provincias section h2, html body .container #provincias h3 {
     text-align: center;
   }
 }
 @media (max-width: 767px) {
-  body .container #provincias div ol {
+  html body .container #imagen img {
+    width: auto;
+  }
+  html body .container #provincias div ol {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(24, 1fr);
   }
-  body .container section h2, body .container h3 {
+  html body .container section h2, html body .container h3 {
     text-align: center;
   }
 }
-body footer p {
+html body footer p {
   width: 100%;
   color: rgb(252, 252, 252);
   text-align: center;
   background-color: rgb(3, 161, 156);
 }
-body footer #arriba {
+html body footer #arriba {
   display: inline-block;
   width: 100%;
   color: rgb(252, 252, 252);
@@ -479,10 +538,10 @@ body footer #arriba {
   text-decoration: none;
   background-color: rgb(3, 161, 156);
 }
-body footer #arriba:hover {
+html body footer #arriba:hover {
   text-decoration: underline;
 }
-body footer #home {
+html body footer #home {
   display: inline;
   color: red;
   position: fixed;
@@ -493,8 +552,9 @@ body footer #home {
   border-radius: 100px;
   border: solid 3px rgba(0, 0, 0, 0.8705882353);
   text-decoration: none;
+  font-weight: 800;
 }
-body footer #home:hover {
+html body footer #home:hover {
   transition: 1s;
   background-color: #000000;
   color: white;

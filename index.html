@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="./css/styles.css">
     </head>
 
-    <body>
+    <body id="body">
         <header>
             <img src="./img/logo.jpg" alt="Logo"><h1 id="titulo">Argentina Turismo</h1>
             <nav>
@@ -42,10 +42,12 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26286684.582429156!2d-84.88297010885435!3d-36.46181420923545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf5f5fdc667%3A0x3d2f77992af00fa8!2sArgentina!5e0!3m2!1ses-419!2sar!4v1705462151460!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </section>
 
-            <section id="regiones">
+            <section id="regiones-index">
                 <h2>Regiones turisticas</h2>
-                <img src="./img/regionesarg.png" alt="Regiones-Argentinas">
-                <div>
+                <div class="mapareg">
+                    <img src="./img/regionesarg.png" alt="Regiones-Argentinas">
+                </div>
+                <div class="grilla">
                     <ol>
                         <li><a class="link" href="./pages/region.html#norte">Norte (naranja)</a></li>
                         <li><a class="link" href="./pages/region.html#litoral">Litoral (verde claro)</a></li>
@@ -136,8 +138,16 @@
         <footer>
             <section>
                 <p>Hecho</p>
-                <a id="arriba" href="./index.html">Volver Arriba</a>
+                <a id="arriba" href="./index.html#body">Volver Arriba</a>
             </section>
+            <nav>
+                <ul>
+                    <li><a href="./pages/comidas.html">Comidas Tipicas</a></li>
+                    <li><a href="./pages/region.html">Regiones Turisticas</a></li>
+                    <li><a href="./pages/recomendados.html">Recomendados</a></li>
+                    <li><a href="./pages/provincias.html">Provincias</a></li>
+                </ul>
+            </nav>
         </footer>
     </body>
 </html>
