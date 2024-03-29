@@ -105,7 +105,6 @@ header {
   background-color: #38b1d6;
   border-bottom: solid 1px black;
   /* ------- Menu  -------- */
-  /* ------- Menu Desplegable -------- */
 }
 header h1 {
   color: rgb(255, 255, 255);
@@ -169,12 +168,38 @@ header nav ul li:hover a, header nav ul li span {
   transition: 0.5s;
 }
 @media (max-width: 467px) {
-  header nav nav {
-    display: none;
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
-}
-header #boton {
-  border: #000000;
+  header nav {
+    width: max-content;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav ul li {
+    width: 100%;
+  }
+  header nav ul li a {
+    display: inline-block;
+    border-top: #FFF solid 1px;
+  }
+  header nav ul li:hover {
+    background: #FFF;
+    border-left: 1px solid #0074D9;
+    transition: 0.5s;
+  }
+  header nav ul li:hover a {
+    background: none;
+    color: #0074D9;
+    border: 0;
+    transition: 0.5;
+  }
 }
 
 footer p {

@@ -43,7 +43,7 @@ header{
         height: 100%;
         margin: none;
 
-        ul {
+        ul{
             text-align: center;
             float: right;
             margin: none;
@@ -77,16 +77,48 @@ header{
                 }
             }
         }
+    }
+    @media (max-width: 467px){
+        &{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
 
-        @media (max-width: 467px){
             nav{
-                display: none;
+                width: max-content;
+            
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    li{
+                        width: 100%;
+
+                        a{
+                            display: inline-block;
+                            border-top: #FFF solid 1px;
+
+                            
+                        }
+
+                        &:hover{
+                            background: #FFF;
+                            border-left: 1px solid #0074D9;
+                            transition: 0.5s;
+
+                            a{
+                                background: none;
+                                color: #0074D9;
+                                border: 0;
+                                transition: 0.5;
+                            }
+                        }
+                    }
+                }
             }
         }
-    }
-
-    /* ------- Menu Desplegable -------- */
-    #boton{
-        border: #000000;
+        
     }
 }
