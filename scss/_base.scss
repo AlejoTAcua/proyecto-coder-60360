@@ -55,6 +55,20 @@ body{
         list-style: none;
     }
 
+
+    @media (max-width: 367px) {
+        h2{
+            font-size: 1.8rem;
+        }
+
+        h3{
+            font-size: 1.6rem;
+        }
+    }
+    
+
+
+
     /* --------- Imagenes --------- */
     img{
         display: block;

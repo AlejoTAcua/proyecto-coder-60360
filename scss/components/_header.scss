@@ -11,6 +11,7 @@ header{
         color: rgb(255, 255, 255);
         float: left;
         padding: none;
+        margin-left: 10px;
         margin: none;
         height: 60px;
         width: 30%;
@@ -20,14 +21,14 @@ header{
 
     img{
         width: 6%;
-        height: auto;
+        height: 10%;
         border: #000000 2px solid;
-        margin: auto;
+        margin: 0;
     }
 
     @media (max-width: 767px){
         h1{
-            visibility: hidden;
+            display: none;
         }
 
         img{
@@ -77,10 +78,15 @@ header{
             }
         }
 
-        @media (max-width: 767px){
-            nav ul li a{
-                visibility: collapse;
+        @media (max-width: 467px){
+            nav{
+                display: none;
             }
         }
+    }
+
+    /* ------- Menu Desplegable -------- */
+    #boton{
+        border: #000000;
     }
 }

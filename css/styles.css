@@ -47,6 +47,14 @@ body ol, body ul {
   padding: 0;
   list-style: none;
 }
+@media (max-width: 367px) {
+  body h2 {
+    font-size: 1.8rem;
+  }
+  body h3 {
+    font-size: 1.6rem;
+  }
+}
 body img {
   display: block;
   margin: auto;
@@ -97,11 +105,13 @@ header {
   background-color: #38b1d6;
   border-bottom: solid 1px black;
   /* ------- Menu  -------- */
+  /* ------- Menu Desplegable -------- */
 }
 header h1 {
   color: rgb(255, 255, 255);
   float: left;
   padding: none;
+  margin-left: 10px;
   margin: none;
   height: 60px;
   width: 30%;
@@ -110,13 +120,13 @@ header h1 {
 }
 header img {
   width: 6%;
-  height: auto;
+  height: 10%;
   border: #000000 2px solid;
-  margin: auto;
+  margin: 0;
 }
 @media (max-width: 767px) {
   header h1 {
-    visibility: hidden;
+    display: none;
   }
   header img {
     width: 25%;
@@ -158,10 +168,13 @@ header nav ul li:hover a, header nav ul li span {
   text-decoration: none;
   transition: 0.5s;
 }
-@media (max-width: 767px) {
-  header nav nav ul li a {
-    visibility: collapse;
+@media (max-width: 467px) {
+  header nav nav {
+    display: none;
   }
+}
+header #boton {
+  border: #000000;
 }
 
 footer p {
@@ -297,7 +310,7 @@ html body .container #regiones-index .grilla ol li a:hover {
 @media (max-width: 767px) {
   html body .container #regiones-index {
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 2fr 0.1fr;
+    grid-template-rows: max-content max-content 0.1fr;
   }
   html body .container #regiones-index .mapareg img {
     width: 100%;
@@ -313,8 +326,15 @@ html body .container #regiones-index .grilla ol li a:hover {
     margin-top: 0px;
   }
 }
-html body .container #recomendaciones #one, html body .container #two, html body .container #three, html body .container #four {
-  display: inline-block;
+html body .container #recomendaciones {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+html body .container #recomendaciones h2 {
+  width: 100%;
+}
+html body .container #recomendaciones #one, html body .container #recomendaciones #two, html body .container #recomendaciones #three, html body .container #recomendaciones #four {
   margin: 0.5em;
   margin-bottom: 2rem;
   background: #898989;
@@ -323,15 +343,16 @@ html body .container #recomendaciones #one, html body .container #two, html body
   border: solid #00DFFC;
   border-radius: 15px;
   box-shadow: 10px 5px 7px 0px black;
+  max-width: max-content;
 }
-html body .container #recomendaciones #one img, html body .container #two img, html body .container #three img, html body .container #four img {
+html body .container #recomendaciones #one img, html body .container #recomendaciones #two img, html body .container #recomendaciones #three img, html body .container #recomendaciones #four img {
   width: 10rem;
   height: 10rem;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
   border: solid 1px black;
 }
-html body .container #recomendaciones #one a, html body .container #two a, html body .container #three a, html body .container #four a {
+html body .container #recomendaciones #one a, html body .container #recomendaciones #two a, html body .container #recomendaciones #three a, html body .container #recomendaciones #four a {
   text-align: center;
   display: block;
   padding: 10px;
@@ -343,14 +364,13 @@ html body .container #recomendaciones #one a, html body .container #two a, html 
   text-decoration: none;
   font-weight: 700;
 }
-html body .container #recomendaciones #one a:hover, html body .container #two a:hover, html body .container #three a:hover, html body .container #four a:hover {
+html body .container #recomendaciones #one a:hover, html body .container #recomendaciones #two a:hover, html body .container #recomendaciones #three a:hover, html body .container #recomendaciones #four a:hover {
   background: rgba(201, 24, 24, 0.8823529412);
   transition: 0.5s;
 }
 @media (max-width: 767px) {
-  html body .container #recomendaciones #one, html body .container #two, html body .container #three, html body .container #four {
+  html body .container #recomendaciones #one, html body .container #recomendaciones #two, html body .container #recomendaciones #three, html body .container #recomendaciones #four {
     padding: 15px;
-    justify-content: space-evenly;
   }
 }
 html body .container #provincias-index {
@@ -451,6 +471,7 @@ html body .container #provincias-index div ol li a:hover {
 @media (max-width: 767px) {
   #comida .comidas {
     width: 40%;
+    height: max-content;
   }
   #comida .comidas p {
     display: none;
@@ -460,6 +481,11 @@ html body .container #provincias-index div ol li a:hover {
   }
   #comida .comidas h3 {
     font-size: 100%;
+  }
+}
+@media (max-width: 467px) {
+  #comida .comidas {
+    width: max-content;
   }
 }
 
@@ -599,7 +625,7 @@ section {
 }
 @media (max-width: 445px) {
   #regiones {
-    grid-template-rows: 50px 2fr 1fr;
+    grid-template-rows: max-content max-content 1fr;
   }
 }
 

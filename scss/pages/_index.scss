@@ -76,7 +76,7 @@ html{
 
                     &{
                         grid-template-columns: 1fr;
-                        grid-template-rows: 50px 2fr 0.1fr;
+                        grid-template-rows: max-content max-content 0.1fr;
 
                         .mapareg img{
                             width: 100%;
@@ -98,47 +98,59 @@ html{
             }
 
             /* --------- RECOMENDADOS INDEX ---------- */
-            #recomendaciones #one, #two, #three, #four{ 
-                display: inline-block;
-                margin: 0.5em;
-                margin-bottom: 2rem;
-                background:  #898989;
-                padding: 30px;
-                position: relative;
-                border: solid #00DFFC;
-                border-radius: 15px;
-                box-shadow: 10px 5px 7px 0px black;
+            #recomendaciones{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-around;
 
-                img{
-                    width: 10rem;
-                    height: 10rem;
-                    border-top-left-radius: 25px;
-                    border-bottom-right-radius: 25px;
-                    border: solid 1px black;
+                h2{
+                    width: 100%;
                 }
-
-                a{
-                    text-align: center;
-                    display: block;
-                    padding: 10px;
-                    color: aliceblue;
-                    background-color: $color-primary;
+            
+                #one, #two, #three, #four{
+                    margin: 0.5em;
+                    margin-bottom: 2rem;
+                    background:  #898989;
+                    padding: 30px;
+                    position: relative;
+                    border: solid #00DFFC;
                     border-radius: 15px;
-                    margin-top: 5px;
-                    border: solid 1px black;
-                    text-decoration: none;
-                    font-weight: 700;
+                    box-shadow: 10px 5px 7px 0px black;
+                    
+                    max-width: max-content;
 
-                    &:hover{
-                        background: #c91818e1;
-                        transition: 0.5s;
+                    img{
+                        width: 10rem;
+                        height: 10rem;
+                        border-top-left-radius: 25px;
+                        border-bottom-right-radius: 25px;
+                        border: solid 1px black;
                     }
-                }
 
-                @media (max-width: 767px) {
-                    &{
-                        padding: 15px;
-                        justify-content: space-evenly;
+                    a{
+                        text-align: center;
+                        display: block;
+                        padding: 10px;
+                        color: aliceblue;
+                        background-color: $color-primary;
+                        border-radius: 15px;
+                        margin-top: 5px;
+                        border: solid 1px black;
+                        text-decoration: none;
+                        font-weight: 700;
+
+                        &:hover{
+                            background: #c91818e1;
+                            transition: 0.5s;
+                        }
+                    }
+
+                    @media (max-width: 767px) {
+                        &{
+                            padding: 15px;
+
+                            
+                        }
                     }
                 }
             }
