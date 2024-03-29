@@ -1,0 +1,79 @@
+#comida{ 
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+    .primera-fila{
+        display: block;
+        margin: auto;
+
+        img{
+            border: #000000 solid 2px;
+            height: 50%;
+            margin-bottom: 25px;
+        }
+
+        p{
+            align-items: center;
+        }
+    }
+
+    .comidas{
+        width: 29%;
+        padding: 10px;
+        margin-bottom: 1rem;
+        background: $color-primary;
+
+        article{
+            background-color: white;
+            padding: 20px; 
+
+            img{
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border: none;
+                margin: none;
+            }
+
+            h3{
+                text-align: center;
+                object-fit: cover;
+            }
+
+            p{
+                border-top:#000000 solid 1px;
+            }
+        }
+    }
+
+    /* ---------- COMIDAS PAGE MOBILE ------------- */
+    @media (min-width: 768px) and (max-width: 1023px) { 
+        .comidas{
+            width: 42%;
+
+            img{
+            width: 100%;
+            height: 20%;
+            }
+        }
+    }
+
+    @media (max-width: 767px){
+        .comidas{ 
+            width: 40%;
+
+            p{
+                display: none;
+            }
+
+            img{
+                width: 70%;
+            }
+
+            h3{
+                font-size: 100%;
+            }
+        }
+    }
+}

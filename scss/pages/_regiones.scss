@@ -1,0 +1,50 @@
+#regiones{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15px 2fr 1fr;
+    background-color:#005F6B;
+
+    #titulo-region{
+        display: inline;
+    }
+
+    #imagen{
+        display: block;
+        margin: auto;
+
+        & img{
+        width:100%;
+        height: 40rem;
+        object-fit: cover;
+        }
+    }
+
+    #reg-lista ul li{
+        margin: 2rem;
+        background-color: $color-primary;
+        border-radius: 10px;
+        width: auto;
+        text-align: center;
+    }
+}
+
+.texto p{
+    border-top: solid 2px black;
+}
+
+section{
+    border-bottom: none;
+}
+
+/* ----------- REGIONES PAGE MOBILE ----------- */
+@media (max-width: 768px) {
+    #regiones{
+        grid-template-rows: 20px 2fr 1fr;
+    }
+}
+
+@media (max-width: 445px) {
+    #regiones{
+        grid-template-rows: 50px 2fr 1fr;
+    }
+}

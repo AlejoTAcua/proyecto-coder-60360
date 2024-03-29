@@ -1,0 +1,107 @@
+$color-primary: #00B4CC;
+
+body{
+    /* #343838,#005F6B,#008C9E,#00B4CC,#00DFFC */
+    :root{
+        --clippy: polygon(0 0, 0 0,0 100%, 0% 100%);
+    }
+
+    background-color:#343838;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto';
+    font-size: 1.1rem;
+    font-style: normal;
+
+    @media (max-width: 767px){
+        &{
+            font-size: 1rem;
+        }
+
+        h2, h3{
+            font-size: 1.8rem;
+        }
+    }
+
+    h2,h3{
+        margin: 0;
+        padding: 0;
+        color: #00B4CC;
+        font-weight: 900;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000000;
+    }
+
+    h2{
+        font-size: 2.6rem;
+    }
+
+    h3{
+        font-size: 2rem;
+    }
+
+    p, ol, ul{
+        margin-top: 0;
+    }
+
+    p{
+        line-height: 180%;
+        text-align: justify;
+        font-weight: 300;
+    }
+
+    ol, ul{
+        padding: 0;
+        list-style: none;
+    }
+
+    /* --------- Imagenes --------- */
+    img{
+        display: block;
+        margin: auto;
+        width: 60%;
+        height: 40rem;
+        object-fit: cover;
+    }
+
+    #argen{
+        display: block;
+        margin: auto;
+
+        img{
+                width: 100%;
+                height: 40rem;
+                object-fit: cover;
+            }
+    }
+
+    @media (max-width: 767px){
+        img{
+            margin: 0;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        #argen img{
+            margin: auto;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    /* --------- LINKS ---------- */
+    .link{
+        color: #000000;
+        border-radius: 1cm ;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    /* -------- Mapas ---------- */
+    .mapa iframe{ 
+        width: 100%;
+        background-size: cover;
+        margin-bottom: 5px;
+    }
+}

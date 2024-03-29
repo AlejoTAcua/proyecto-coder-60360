@@ -1,0 +1,82 @@
+#provincias{ 
+    #imagen{
+        display: block;
+        margin: auto;
+
+        & img{
+        width:100%;
+        height: 40rem;
+        object-fit: cover;
+        }
+    }
+
+    section p{
+        text-decoration: wavy;
+        border-top: solid 2px black;
+    }
+
+    div ol{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(8,1fr);
+        border: #000000 solid 5px;
+        gap: 5px;
+    
+
+        li{
+            border: #000000 solid 2px;
+            padding: 5px;
+            background: #ffffff;
+
+            a{
+                text-align: center;
+                display: block;
+                padding: 10px;
+                color: aliceblue;
+                background-color: $color-primary;
+                border-radius: 15px;
+                margin-top: 5px;
+                border: solid 1px black;
+                text-decoration: none;
+            }
+    
+            a:hover{
+                background: #c91818e1;
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+/* -------- PROVINCIAS PAGE TABLET ------------ */
+@media (min-width: 768px) and (max-width: 1023px) { 
+    #provincias{
+        #imagen img{
+            height: auto;
+        }
+
+        div ol{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(12,1fr);
+        }
+
+        section h2, h3{
+            text-align: center;
+        }
+    }
+}
+
+/* -------- PROVINCIAS PAGE MOBILE ------- */
+@media (max-width: 767px) {
+    #imagen img{
+        width: auto;
+    }
+
+    #provincias div ol{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(24,1fr);
+    }
+    section h2, h3{
+        text-align: center;
+    }
+}

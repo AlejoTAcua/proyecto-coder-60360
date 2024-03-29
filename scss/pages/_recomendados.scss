@@ -1,0 +1,30 @@
+#recomendados-page{ 
+    background-color: white;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 0px 1rem;
+    border-left: solid 3px black;
+    border-right: solid 3px black;
+
+    article{
+        display: block;
+
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border: #000000 solid 2px;
+        }
+
+        h3{
+        text-decoration: underline;
+        }
+    }
+}
+
+/* ----------- RECOMENDADOS PAGE MOBILE ----------- */
+@media (max-width: 768px) { 
+    article h2, h3{
+        text-align: center;
+    }
+}

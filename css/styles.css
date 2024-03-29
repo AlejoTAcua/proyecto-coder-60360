@@ -1,7 +1,4 @@
-html {
-  scroll-behavior: smooth;
-}
-html body {
+body {
   /* #343838,#005F6B,#008C9E,#00B4CC,#00DFFC */
   background-color: #343838;
   margin: 0px;
@@ -12,22 +9,19 @@ html body {
   /* --------- Imagenes --------- */
   /* --------- LINKS ---------- */
   /* -------- Mapas ---------- */
-  /* --------- Header ------- */
-  /* --------- MAIN -------- */
-  /* ----------- FOOTER --------- */
 }
-html body :root {
+body :root {
   --clippy: polygon(0 0, 0 0,0 100%, 0% 100%);
 }
 @media (max-width: 767px) {
-  html body {
+  body {
     font-size: 1rem;
   }
-  html body h2, html body h3 {
+  body h2, body h3 {
     font-size: 1.8rem;
   }
 }
-html body h2, html body h3 {
+body h2, body h3 {
   margin: 0;
   padding: 0;
   color: #00B4CC;
@@ -35,65 +29,66 @@ html body h2, html body h3 {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000000;
 }
-html body h2 {
+body h2 {
   font-size: 2.6rem;
 }
-html body h3 {
+body h3 {
   font-size: 2rem;
 }
-html body p, html body ol, html body ul {
+body p, body ol, body ul {
   margin-top: 0;
 }
-html body p {
+body p {
   line-height: 180%;
   text-align: justify;
   font-weight: 300;
 }
-html body ol, html body ul {
+body ol, body ul {
   padding: 0;
   list-style: none;
 }
-html body img {
+body img {
   display: block;
   margin: auto;
   width: 60%;
   height: 40rem;
   object-fit: cover;
 }
-html body #argen {
+body #argen {
   display: block;
   margin: auto;
 }
-html body #argen img {
+body #argen img {
   width: 100%;
   height: 40rem;
   object-fit: cover;
 }
 @media (max-width: 767px) {
-  html body img {
+  body img {
     margin: 0;
     width: 100%;
     height: auto;
     object-fit: cover;
   }
-  html body #argen img {
+  body #argen img {
     margin: auto;
     width: 100%;
     height: auto;
   }
 }
-html body .link {
+body .link {
   color: #000000;
   border-radius: 1cm;
   text-decoration: none;
   font-weight: 700;
 }
-html body .mapa iframe {
+body .mapa iframe {
   width: 100%;
   background-size: cover;
   margin-bottom: 5px;
 }
-html body header {
+
+header {
   overflow: hidden;
   display: flex;
   justify-content: space-between;
@@ -103,7 +98,7 @@ html body header {
   border-bottom: solid 1px black;
   /* ------- Menu  -------- */
 }
-html body header h1 {
+header h1 {
   color: rgb(255, 255, 255);
   float: left;
   padding: none;
@@ -113,39 +108,39 @@ html body header h1 {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
-html body header img {
+header img {
   width: 6%;
   height: auto;
   border: #000000 2px solid;
   margin: auto;
 }
 @media (max-width: 767px) {
-  html body header h1 {
+  header h1 {
     visibility: hidden;
   }
-  html body header img {
+  header img {
     width: 25%;
   }
 }
-html body header nav {
+header nav {
   float: right;
   width: 70%;
   height: 100%;
   margin: none;
 }
-html body header nav ul {
+header nav ul {
   text-align: center;
   float: right;
   margin: none;
   background: rgba(6, 126, 200, 0.937254902);
   border: solid 2px black;
 }
-html body header nav ul li {
+header nav ul li {
   display: inline-block;
   padding: none;
   margin: none;
 }
-html body header nav ul li a, html body header nav ul li span {
+header nav ul li a, header nav ul li span {
   display: inline-block;
   padding: 0em 1.5em;
   text-decoration: none;
@@ -153,10 +148,10 @@ html body header nav ul li a, html body header nav ul li span {
   text-transform: uppercase;
   line-height: 60px;
 }
-html body header nav ul li a {
+header nav ul li a {
   color: #FFF;
 }
-html body header nav ul li:hover a, html body header nav ul li span {
+header nav ul li:hover a, header nav ul li span {
   background: #FFF;
   color: #0074D9;
   border-left: 1px solid #0074D9;
@@ -164,9 +159,75 @@ html body header nav ul li:hover a, html body header nav ul li span {
   transition: 0.5s;
 }
 @media (max-width: 767px) {
-  html body header nav nav ul li a {
+  header nav nav ul li a {
     visibility: collapse;
   }
+}
+
+footer p {
+  width: 100%;
+  color: rgb(252, 252, 252);
+  text-align: center;
+  background-color: rgb(3, 161, 156);
+}
+footer #arriba {
+  display: inline-block;
+  width: 100%;
+  color: rgb(252, 252, 252);
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(3, 161, 156);
+}
+footer #arriba:hover {
+  text-decoration: underline;
+}
+footer #footer-nav {
+  background-color: #00B4CC;
+  text-align: center;
+  border-bottom: rgb(3, 161, 156) solid 15px;
+}
+footer #footer-nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+footer #footer-nav ul a {
+  text-decoration: none;
+  color: #FFF;
+}
+footer #footer-nav ul a:hover {
+  transition-duration: 1s;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: white;
+  padding: 0.5rem;
+}
+@media (max-width: 767px) {
+  footer #footer-nav ul {
+    flex-direction: column;
+  }
+}
+footer #home {
+  display: inline;
+  color: red;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  background-color: #FFF;
+  padding: 15px;
+  border-radius: 100px;
+  border: solid 3px rgba(0, 0, 0, 0.8705882353);
+  text-decoration: none;
+  font-weight: 800;
+}
+footer #home:hover {
+  transition: 1s;
+  background-color: #000000;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 html body .container {
   margin: 0px auto;
@@ -175,14 +236,6 @@ html body .container {
   /* --------- RECOMENDADOS INDEX ---------- */
   /* ----------- PROVINCIAS INDEX ------- */
   /* PROVINCIAS INDEX TABLET */
-  /* ---------- COMIDAS PAGE -------- */
-  /* ---------- REGIONES PAGE ------------ */
-  /* ----------- REGIONES PAGE MOBILE ----------- */
-  /* --------- PAGE RECOMENDADOS ----------- */
-  /* ----------- RECOMENDADOS PAGE MOBILE ----------- */
-  /* -------- PROVINCIAS PAGE ----------- */
-  /* -------- PROVINCIAS PAGE TABLET ------------ */
-  /* -------- PROVINCIAS PAGE MOBILE ------- */
 }
 @media (max-width: 767px) {
   html body .container {
@@ -343,108 +396,74 @@ html body .container #provincias-index div ol li a:hover {
     font-size: 100%;
   }
 }
-html body .container #comida {
+
+#comida {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
   /* ---------- COMIDAS PAGE MOBILE ------------- */
 }
-html body .container #comida .primera-fila {
+#comida .primera-fila {
   display: block;
   margin: auto;
 }
-html body .container #comida .primera-fila img {
+#comida .primera-fila img {
   border: #000000 solid 2px;
   height: 50%;
   margin-bottom: 25px;
 }
-html body .container #comida .primera-fila p {
+#comida .primera-fila p {
   align-items: center;
 }
-html body .container #comida .comidas {
+#comida .comidas {
   width: 29%;
   padding: 10px;
   margin-bottom: 1rem;
   background: #00B4CC;
 }
-html body .container #comida .comidas article {
+#comida .comidas article {
   background-color: white;
   padding: 20px;
 }
-html body .container #comida .comidas article img {
+#comida .comidas article img {
   width: 100%;
   height: auto;
   object-fit: cover;
   border: none;
   margin: none;
 }
-html body .container #comida .comidas article h3 {
+#comida .comidas article h3 {
   text-align: center;
   object-fit: cover;
 }
-html body .container #comida .comidas article p {
+#comida .comidas article p {
   border-top: #000000 solid 1px;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  html body .container #comida .comidas {
+  #comida .comidas {
     width: 42%;
   }
-  html body .container #comida .comidas img {
+  #comida .comidas img {
     width: 100%;
     height: 20%;
   }
 }
 @media (max-width: 767px) {
-  html body .container #comida .comidas {
+  #comida .comidas {
     width: 40%;
   }
-  html body .container #comida .comidas p {
+  #comida .comidas p {
     display: none;
   }
-  html body .container #comida .comidas img {
+  #comida .comidas img {
     width: 70%;
   }
-  html body .container #comida .comidas h3 {
+  #comida .comidas h3 {
     font-size: 100%;
   }
 }
-html body .container #regiones {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 15px 2fr 1fr;
-  background-color: #005F6B;
-}
-html body .container #regiones #titulo-region {
-  display: inline;
-}
-html body .container #regiones #imagen {
-  display: block;
-  margin: auto;
-}
-html body .container #regiones #imagen img {
-  width: 100%;
-  height: 40rem;
-  object-fit: cover;
-}
-html body .container #regiones #reg-lista ul li {
-  margin: 2rem;
-  background-color: #00B4CC;
-  border-radius: 10px;
-  width: auto;
-  text-align: center;
-}
-html body .container .texto p {
-  border-top: solid 2px black;
-}
-html body .container section {
-  border-bottom: none;
-}
-@media (max-width: 768px) {
-  html body .container #regiones {
-    grid-template-rows: 20px 2fr 1fr;
-  }
-}
-html body .container #recomendados-page {
+
+#recomendados-page {
   background-color: white;
   display: flex;
   flex-flow: column wrap;
@@ -452,49 +471,51 @@ html body .container #recomendados-page {
   border-left: solid 3px black;
   border-right: solid 3px black;
 }
-html body .container #recomendados-page article {
+#recomendados-page article {
   display: block;
 }
-html body .container #recomendados-page article img {
+#recomendados-page article img {
   width: 100%;
   height: auto;
   object-fit: cover;
   border: #000000 solid 2px;
 }
-html body .container #recomendados-page article h3 {
+#recomendados-page article h3 {
   text-decoration: underline;
 }
+
+/* ----------- RECOMENDADOS PAGE MOBILE ----------- */
 @media (max-width: 768px) {
-  html body .container article h2, html body .container h3 {
+  article h2, h3 {
     text-align: center;
   }
 }
-html body .container #provincias #imagen {
+#provincias #imagen {
   display: block;
   margin: auto;
 }
-html body .container #provincias #imagen img {
+#provincias #imagen img {
   width: 100%;
   height: 40rem;
   object-fit: cover;
 }
-html body .container #provincias section p {
+#provincias section p {
   text-decoration: wavy;
   border-top: solid 2px black;
 }
-html body .container #provincias div ol {
+#provincias div ol {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(8, 1fr);
   border: #000000 solid 5px;
   gap: 5px;
 }
-html body .container #provincias div ol li {
+#provincias div ol li {
   border: #000000 solid 2px;
   padding: 5px;
   background: #ffffff;
 }
-html body .container #provincias div ol li a {
+#provincias div ol li a {
   text-align: center;
   display: block;
   padding: 10px;
@@ -505,68 +526,81 @@ html body .container #provincias div ol li a {
   border: solid 1px black;
   text-decoration: none;
 }
-html body .container #provincias div ol li a:hover {
+#provincias div ol li a:hover {
   background: rgba(201, 24, 24, 0.8823529412);
   transition: 0.5s;
 }
+
+/* -------- PROVINCIAS PAGE TABLET ------------ */
 @media (min-width: 768px) and (max-width: 1023px) {
-  html body .container #provincias #imagen img {
+  #provincias #imagen img {
     height: auto;
   }
-  html body .container #provincias div ol {
+  #provincias div ol {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(12, 1fr);
   }
-  html body .container #provincias section h2, html body .container #provincias h3 {
+  #provincias section h2, #provincias h3 {
     text-align: center;
   }
 }
+/* -------- PROVINCIAS PAGE MOBILE ------- */
 @media (max-width: 767px) {
-  html body .container #imagen img {
+  #imagen img {
     width: auto;
   }
-  html body .container #provincias div ol {
+  #provincias div ol {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(24, 1fr);
   }
-  html body .container section h2, html body .container h3 {
+  section h2, h3 {
     text-align: center;
   }
 }
-html body footer p {
-  width: 100%;
-  color: rgb(252, 252, 252);
-  text-align: center;
-  background-color: rgb(3, 161, 156);
+#regiones {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15px 2fr 1fr;
+  background-color: #005F6B;
 }
-html body footer #arriba {
-  display: inline-block;
-  width: 100%;
-  color: rgb(252, 252, 252);
-  text-align: center;
-  text-decoration: none;
-  background-color: rgb(3, 161, 156);
-}
-html body footer #arriba:hover {
-  text-decoration: underline;
-}
-html body footer #home {
+#regiones #titulo-region {
   display: inline;
-  color: red;
-  position: fixed;
-  bottom: 5px;
-  right: 5px;
-  background-color: #FFF;
-  padding: 15px;
-  border-radius: 100px;
-  border: solid 3px rgba(0, 0, 0, 0.8705882353);
-  text-decoration: none;
-  font-weight: 800;
 }
-html body footer #home:hover {
-  transition: 1s;
-  background-color: #000000;
-  color: white;
+#regiones #imagen {
+  display: block;
+  margin: auto;
+}
+#regiones #imagen img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+}
+#regiones #reg-lista ul li {
+  margin: 2rem;
+  background-color: #00B4CC;
+  border-radius: 10px;
+  width: auto;
+  text-align: center;
+}
+
+.texto p {
+  border-top: solid 2px black;
+}
+
+section {
+  border-bottom: none;
+}
+
+/* ----------- REGIONES PAGE MOBILE ----------- */
+@media (max-width: 768px) {
+  #regiones {
+    grid-template-rows: 20px 2fr 1fr;
+  }
+}
+@media (max-width: 445px) {
+  #regiones {
+    grid-template-rows: 50px 2fr 1fr;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
